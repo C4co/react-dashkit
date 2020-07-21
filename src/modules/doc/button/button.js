@@ -36,7 +36,7 @@ export function DocButtons () {
         <Syntax arrow={false} code={import1}/>
       </Block>
 
-      <Block Icon={FaCog} bigMargin title="properties" solid>
+      <Block Icon={FaCog} bigMargin title="<Button> - properties" solid>
         <BlockField title="iconLeft">
           react-icon - Inset a icon in left side of the button
         </BlockField>

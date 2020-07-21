@@ -22,7 +22,7 @@ export function DocSyntax() {
         <Syntax code={import1} arrow={false} />
       </Block>
 
-      <Block Icon={FaCog} solid bigMargin title="<Syntax /> - Properties">
+      <Block Icon={FaCog} solid bigMargin title="<Syntax> - Properties">
         <BlockField title="code">
           string-literal - code example
         </BlockField>

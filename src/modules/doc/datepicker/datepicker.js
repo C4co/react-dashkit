@@ -23,9 +23,9 @@ export function DocDatepicker() {
         <Syntax code={import1} arrow={false} />
       </Block>
 
-      <Block Icon={FaCog} solid bigMargin title="<DatePicker /> - Properties">
+      <Block Icon={FaCog} solid bigMargin title="<DatePicker> - Properties">
         <Text>
-          { `<DatePicker /> extends react-date-picker`} see all details here ->
+          { `<DatePicker /> extends react-date-picker`} see all details here -
           <A href="https://reactdatepicker.com/"> React DatePicker </A>
         </Text>
       </Block>

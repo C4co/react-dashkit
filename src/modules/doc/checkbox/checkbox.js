@@ -27,7 +27,7 @@ export function DocCheckbox() {
         <Syntax code={import1} arrow={false}/>
       </Block>
 
-      <Block Icon={FaCog} solid bigMargin title="Properties">
+      <Block Icon={FaCog} solid bigMargin title="<Checkbox> - properties">
         <BlockField title="label">
           string - checkbox label
         </BlockField>

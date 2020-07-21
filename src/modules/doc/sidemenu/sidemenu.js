@@ -21,25 +21,25 @@ export function DocSideMenu() {
         <Syntax arrow={false} code={import1} />
       </Block>
 
-      <Block Icon={FaCog} bigMargin solid title="<SideMenu /> - Properties">
+      <Block Icon={FaCog} bigMargin solid title="<SideMenu> - Properties">
         <BlockField title="children">
           any - component children
         </BlockField>
       </Block>
 
-      <Block Icon={FaCog} bigMargin solid title="<SideMenuDivision /> - Properties">
+      <Block Icon={FaCog} bigMargin solid title="<SideMenuDivision> - Properties">
         <BlockField title="title">
           string - section title
         </BlockField>
       </Block>
 
-      <Block Icon={FaCog} bigMargin solid title="<SideMenuItem /> - Properties">
+      <Block Icon={FaCog} bigMargin solid title="<SideMenuItem> - Properties">
         <BlockField title="actived">
           boolean - component actived mode
         </BlockField>
 
         <BlockField title="to">
-          string - string representation of the link location (extends Link component by react-router-dom)
+          string - string representation of the link location (extends Link component from react-router-dom)
          </BlockField>
 
          <BlockField title="to">
@@ -48,7 +48,7 @@ export function DocSideMenu() {
       </Block>
 
       <Block bigMargin>
-        <h1> {`<--- See the example here!`} </h1>
+        <h1> {`<--- See the example there!`} </h1>
         <Syntax code={example1} />
       </Block>
     </DocTemplate>

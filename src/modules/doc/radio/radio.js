@@ -36,13 +36,13 @@ export function DocRadio() {
         <Syntax code={import1} arrow={false}/>
       </Block>
 
-      <Block Icon={FaCog} solid bigMargin title="Properties">
+      <Block Icon={FaCog} solid bigMargin title="<Radio> - Properties">
         <BlockField title="label">
           label - radio group label
         </BlockField>
 
         <BlockField title="options">
-          {`[{key, value, description }]`} - radio options
+          {`[{ key, value, description }]`} - radio options
         </BlockField>
       </Block>
 

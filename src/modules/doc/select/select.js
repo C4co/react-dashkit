@@ -33,9 +33,9 @@ export function DocSelect() {
         <Syntax code={import1} arrow={false}/>
       </Block>
 
-      <Block Icon={FaCog} solid bigMargin title="Properties">
+      <Block Icon={FaCog} solid bigMargin title="<Select> - Properties">
         <BlockField title="options">
-          {`[{key, value}]`} - select options
+          {`[{ key, value }]`} - select options
         </BlockField>
       </Block>
 

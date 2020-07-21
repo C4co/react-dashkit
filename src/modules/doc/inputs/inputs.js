@@ -33,7 +33,7 @@ export function DocInputs(){
         <Syntax code={import1} arrow={false} />
       </Block>
 
-      <Block Icon={FaCog} bigMargin title="properties" solid>
+      <Block Icon={FaCog} bigMargin title="<inputs> - properties" solid>
         <BlockField title="label">
           string - input label
         </BlockField>

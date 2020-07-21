@@ -29,7 +29,7 @@ export function DocBlock() {
         <Syntax arrow={false} code={import1} />
       </Block>
 
-      <Block Icon={FaCog} bigMargin solid title="<Block/> - Properties">
+      <Block Icon={FaCog} bigMargin solid title="<Block> - Properties">
         <BlockField title="title">
           string - block title
         </BlockField>
@@ -55,7 +55,7 @@ export function DocBlock() {
         </BlockField>
       </Block>
 
-      <Block Icon={FaCog} bigMargin solid title="<BlockField/> - Properties">
+      <Block Icon={FaCog} bigMargin solid title="<BlockField> - Properties">
         <BlockField title="title">
           string - blockfield title
         </BlockField>

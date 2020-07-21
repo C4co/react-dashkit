@@ -15,11 +15,9 @@ export const example3 = `
 `
 
 export const example4 = `
-<>
-  <Checkbox label="Red" description="red color" />
-  <Checkbox label="Blue" description="blue color" />
-  <Checkbox label="Green" description="green color" />
-  <Checkbox label="White" description="white color" />
-  <Checkbox label="Black" description="black color" />
-</>
+<Checkbox label="Red" description="red color" />
+<Checkbox label="Blue" description="blue color" />
+<Checkbox label="Green" description="green color" />
+<Checkbox label="White" description="white color" />
+<Checkbox label="Black" description="black color" />
 `
