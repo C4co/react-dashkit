@@ -17,7 +17,7 @@ const Container = styled.div`
     background-color: ${COLORS.BLOCK_BACKGROUND};
     border-radius: 3px;
     padding: ${SIZE.BLOCK.PADDING};
-    box-shadow: 0px 2px 10px -3px ${COLORS.BLOCK_SHADOW};
+    box-shadow: 0px 2px 6px -3px ${COLORS.BLOCK_SHADOW};
   `}
 
   ${props => props.bigMargin && css`

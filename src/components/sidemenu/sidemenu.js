@@ -13,13 +13,14 @@ export const SideMenu = styled.section`
   box-shadow: 0px 2px 10px -3px ${COLORS.BLOCK_SHADOW};
   margin-left: 0px;
   transition: all 0.3s linear 0s;
+  font-size: 0.95em;
 
   @media(max-width: 1000px){
     margin-left: -240px;
   }
 `
 
-// <SideMenu />
+// <SideMenuItem />
 
 export const SideMenuItemWrapper = styled(Link)`
   display: block;
@@ -66,13 +67,15 @@ export function SideMenuItem({ actived, to, Icon, children }){
 // <SideMenuDivision />
 
 const SideMenuDivisionTitle = styled.h1`
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   font-size: 1em;
   color: ${COLORS.WHITE};
   text-align: left;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  font-size: 0.9em;
+  font-size: 0.8em;
+  padding: 15px;
+  border-bottom: solid ${lighten(0.1, COLORS.SIDEMENU_BACKGROUND)} 1px;
 `
 
 const SideMenuDivisionWrapper = styled.nav`
