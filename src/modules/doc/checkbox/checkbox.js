@@ -2,9 +2,9 @@ import React from "react"
 
 import {
   Block,
-  BlockField,
   Syntax,
-  Checkbox
+  Checkbox,
+  BasicTable
 } from "../../../components"
 
 import { DocTemplate } from "../../../templates"
@@ -19,36 +19,33 @@ import {
   example4
 } from "./checkbox-examples"
 
+import { checkboxProps } from "./checkbox-props"
+
 export function DocCheckbox() {
   return (
     <DocTemplate actived="check" title="checkbox">
 
       <Block bigMargin>
-        <Syntax code={import1} arrow={false}/>
+        <Syntax code={import1} arrow={false} />
       </Block>
 
-      <Block Icon={FaCog} solid bigMargin title="<Checkbox> - properties">
-        <BlockField title="label">
-          string - checkbox label
-        </BlockField>
-        <BlockField title="Description">
-          string - checkbox description
-        </BlockField>
+      <Block>
+        <BasicTable icon={FaCog} title="<Checkbox> - properties" data={checkboxProps} />
       </Block>
 
       <Block bigMargin>
-        <Checkbox label="Checkbox"/>
-        <Syntax code={example1}/>
+        <Checkbox label="Checkbox" />
+        <Syntax code={example1} />
       </Block>
 
       <Block bigMargin>
-        <Checkbox defaultChecked={true} label="Checkbox checked"/>
-        <Syntax code={example2}/>
+        <Checkbox defaultChecked={true} label="Checkbox checked" />
+        <Syntax code={example2} />
       </Block>
 
       <Block bigMargin>
-        <Checkbox disabled label="Checkbox disabled"/>
-        <Syntax code={example3}/>
+        <Checkbox disabled label="Checkbox disabled" />
+        <Syntax code={example3} />
       </Block>
 
       <Block bigMargin>
@@ -59,7 +56,7 @@ export function DocCheckbox() {
           <Checkbox label="White" description="white color" />
           <Checkbox label="Black" description="black color" />
         </>
-        <Syntax code={example4}/>
+        <Syntax code={example4} />
       </Block>
 
     </DocTemplate>

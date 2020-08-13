@@ -4,15 +4,18 @@ import {
   Block,
   Syntax,
   DatePicker,
-  Text,
-  A
+  BasicTable
 } from "../../../components"
+
 import { DocTemplate } from "../../../templates"
 
 import {
   import1,
-  example1
+  example1,
+  example2
 } from "./datepicker-examples"
+
+import { datepickerProps } from "./datepcker-props"
 
 export function DocDatepicker() {
   const [date, setDate] = useState(new Date())
@@ -23,11 +26,8 @@ export function DocDatepicker() {
         <Syntax code={import1} arrow={false} />
       </Block>
 
-      <Block Icon={FaCog} solid bigMargin title="<DatePicker> - Properties">
-        <Text>
-          { `<DatePicker /> extends react-date-picker`} see all details here -
-          <A href="https://reactdatepicker.com/"> React DatePicker </A>
-        </Text>
+      <Block bigMargin>
+        <BasicTable icon={FaCog} title="<DatePicker> - properties" data={datepickerProps} />
       </Block>
 
       <Block bigMargin>
@@ -35,6 +35,10 @@ export function DocDatepicker() {
         <Syntax code={example1} />
       </Block>
 
+      <Block bigMargin>
+        <DatePicker error errorMessage="Error message" selected={date} onChange={date => {setDate(date)}} />
+        <Syntax code={example2} />
+      </Block>
     </DocTemplate>
   )
 }

@@ -3,6 +3,10 @@ import { select } from "../components"
 `
 
 export const example1 = `
+  <Select/>
+`
+
+export const example2 = `
 ...
 
 const data = [
@@ -20,7 +24,7 @@ const data = [
   label="My select" />
 `
 
-export const example2 = `
+export const example3 = `
 ...
 
 const data = [

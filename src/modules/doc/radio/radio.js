@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react"
 
 import {
   Block,
-  BlockField,
   Syntax,
-  Radio
+  Radio,
+  BasicTable
 } from "../../../components"
 
 import { DocTemplate } from "../../../templates"
@@ -15,6 +15,8 @@ import {
   import1,
   example1,
 } from "./radio-example"
+
+import { radioProps } from "./radio-props"
 
 export function DocRadio() {
   const [value, setValue] = useState(null)
@@ -33,21 +35,15 @@ export function DocRadio() {
   return (
     <DocTemplate actived="radio" title="Radio">
       <Block bigMargin>
-        <Syntax code={import1} arrow={false}/>
+        <Syntax code={import1} arrow={false} />
       </Block>
 
-      <Block Icon={FaCog} solid bigMargin title="<Radio> - Properties">
-        <BlockField title="label">
-          label - radio group label
-        </BlockField>
-
-        <BlockField title="options">
-          {`[{ key, value, description }]`} - radio options
-        </BlockField>
+      <Block>
+        <BasicTable icon={FaCog} title="<Radio> - properties" data={radioProps} />
       </Block>
 
       <Block bigMargin>
-        <Radio label="Radio example" options={data} onChange={(event) => { setValue(event.target.value) }} />
+        <Radio options={data} onChange={(event) => { setValue(event.target.value) }} />
         <Syntax code={example1} />
       </Block>
     </DocTemplate>

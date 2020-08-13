@@ -2,9 +2,9 @@ import React from "react"
 
 import {
   Block,
-  BlockField,
   Syntax,
-  Select
+  Select,
+  BasicTable
 } from "../../../components"
 
 import { FaCog } from "react-icons/fa"
@@ -14,8 +14,11 @@ import { DocTemplate } from "../../../templates"
 import {
   import1,
   example1,
-  example2
+  example2,
+  example3
 } from "./select-examples"
+
+import { selectProps } from "./select-props"
 
 export function DocSelect() {
 
@@ -33,10 +36,13 @@ export function DocSelect() {
         <Syntax code={import1} arrow={false}/>
       </Block>
 
-      <Block Icon={FaCog} solid bigMargin title="<Select> - Properties">
-        <BlockField title="options">
-          {`[{ key, value }]`} - select options
-        </BlockField>
+      <Block>
+        <BasicTable icon={FaCog} title="<Select> - properties" data={selectProps}  />
+      </Block>
+
+      <Block bigMargin>
+        <Select />
+        <Syntax code={example1} />
       </Block>
 
       <Block bigMargin>
@@ -44,7 +50,7 @@ export function DocSelect() {
           placeholder="Select an option"
           options={data}
           label="Select label" />
-        <Syntax code={example1} />
+        <Syntax code={example2} />
       </Block>
 
       <Block bigMargin>
@@ -54,7 +60,7 @@ export function DocSelect() {
           placeholder="Select an option"
           options={data}
           label="Select label" />
-        <Syntax code={example2} />
+        <Syntax code={example3} />
       </Block>
 
     </DocTemplate>

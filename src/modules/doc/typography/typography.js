@@ -6,10 +6,13 @@ import {
   A,
   Text,
   Title,
-  SubTitle
+  SubTitle,
+  BasicTable
 } from "../../../components"
 
 import { DocTemplate } from "../../../templates"
+
+import { FaCog } from "react-icons/fa"
 
 import {
   import1,
@@ -20,12 +23,18 @@ import {
   example5
 } from "./typography-examples"
 
+import { titleProps } from "./typography-props"
+
 export function DocTypography(){
 
   return (
     <DocTemplate actived="typography" title="Typography">
       <Block bigMargin>
         <Syntax code={import1} arrow={false} />
+      </Block>
+
+      <Block bigMargin>
+        <BasicTable icon={FaCog} title="<Title> - properties" data={titleProps} />
       </Block>
 
       <Block bigMargin>
@@ -65,7 +74,13 @@ export function DocTypography(){
 
       <Block bigMargin>
         <Block solid>
-          <Title> Title </Title>
+          <Title> Default Title </Title>
+          <Title h1> Title h1 </Title>
+          <Title h2> Title h2 </Title>
+          <Title h3> Title h3 </Title>
+          <Title h4> Title h4 </Title>
+          <Title h5> Title h5 </Title>
+          <Title h6> Title h6 </Title>
         </Block>
         <Syntax code={example3}/>
       </Block>

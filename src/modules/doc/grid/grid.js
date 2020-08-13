@@ -4,14 +4,16 @@ import { DocTemplate } from "../../../templates"
 
 import {
   Block,
-  BlockField,
   Syntax,
-  Grid
+  Column,
+  BasicTable
 } from "../../../components"
 
-import { import1, example1 } from "./grid-example"
+import { import1, example1, example2 } from "./grid-example"
 
 import { FaCog } from "react-icons/fa"
+
+import { gridProps } from "./grid-props"
 
 export function DocGrid(){
   return (
@@ -21,43 +23,67 @@ export function DocGrid(){
         <Syntax code={import1} arrow={false} />
       </Block>
 
-      <Block Icon={FaCog} solid bigMargin title="<Grid> - Propeties">
-        <BlockField title="col">
-          number - number of grid columns
-        </BlockField>
+      <Block>
+        <BasicTable icon={FaCog} title="<Column> - properties" data={gridProps} />
       </Block>
 
-      <Block>
-        <Grid>
-          <Block solid> 1 </Block>
-        </Grid>
+      <Block bigMargin>
+        <Block>
+          <Column>
+            <Block solid noMargin> 1 </Block>
+          </Column>
+        </Block>
 
-        <Grid col={2}>
-          <Block solid> 1 </Block>
-          <Block solid> 2 </Block>
-        </Grid>
+        <Block>
+          <Column col={2}>
+            <Block solid noMargin> 1 </Block>
+            <Block solid noMargin> 2 </Block>
+          </Column>
+        </Block>
 
-        <Grid col={3}>
-          <Block solid> 1 </Block>
-          <Block solid> 2 </Block>
-          <Block solid> 3 </Block>
-        </Grid>
+        <Block>
+          <Column col={3}>
+            <Block solid noMargin> 1 </Block>
+            <Block solid noMargin> 2 </Block>
+            <Block solid noMargin> 3 </Block>
+          </Column>
+        </Block>
 
-        <Grid col={4}>
-          <Block solid> 1 </Block>
-          <Block solid> 2 </Block>
-          <Block solid> 3 </Block>
-          <Block solid> 4 </Block>
-        </Grid>
+        <Block>
+          <Column col={4}>
+            <Block solid noMargin> 1 </Block>
+            <Block solid noMargin> 2 </Block>
+            <Block solid noMargin> 3 </Block>
+            <Block solid noMargin> 4 </Block>
+          </Column>
+        </Block>
 
-        <Grid col={5}>
-          <Block solid> 1 </Block>
-          <Block solid> 2 </Block>
-          <Block solid> 3 </Block>
-          <Block solid> 4 </Block>
-          <Block solid> 5 </Block>
-        </Grid>
+        <Block>
+          <Column col={5}>
+            <Block solid noMargin> 1 </Block>
+            <Block solid noMargin> 2 </Block>
+            <Block solid noMargin> 3 </Block>
+            <Block solid noMargin> 4 </Block>
+            <Block solid noMargin> 5 </Block>
+          </Column>
+        </Block>
         <Syntax code={example1} />
+      </Block>
+
+      <Block bigMargin>
+        <Column col={3} gap={40}>
+          <Block solid noMargin> 1 </Block>
+          <Block solid noMargin> 2 </Block>
+          <Block solid noMargin> 3 </Block>
+          <Block solid noMargin> 4 </Block>
+          <Block solid noMargin> 5 </Block>
+          <Block solid noMargin> 6 </Block>
+          <Block solid noMargin> 7 </Block>
+          <Block solid noMargin> 8 </Block>
+          <Block solid noMargin> 9 </Block>
+        </Column>
+
+        <Syntax code={example2} />
       </Block>
 
     </DocTemplate>

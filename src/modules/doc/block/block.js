@@ -1,10 +1,10 @@
 import React from "react"
 import {
   Block,
-  BlockField,
   Syntax,
   Text,
-  Button
+  Button,
+  BasicTable
 } from "../../../components"
 
 import { DocTemplate } from "../../../templates"
@@ -16,11 +16,12 @@ import {
   example1,
   example2,
   example3,
-  example4,
   example5,
   example6,
   example7
 } from "./block-examples"
+
+import { blockProps } from "./block-props"
 
 export function DocBlock() {
   return (
@@ -29,36 +30,8 @@ export function DocBlock() {
         <Syntax arrow={false} code={import1} />
       </Block>
 
-      <Block Icon={FaCog} bigMargin solid title="<Block> - Properties">
-        <BlockField title="title">
-          string - block title
-        </BlockField>
-
-        <BlockField title="solid">
-          boolean - block on solid mode
-        </BlockField>
-
-        <BlockField title="bigMargin">
-          boolean - bottom margin
-        </BlockField>
-
-        <BlockField title="col2">
-          boolean - divide block in 2 columns
-        </BlockField>
-
-        <BlockField title="Icon">
-          ReactIcon - header icon
-        </BlockField>
-
-        <BlockField title="footer">
-          any - footer elements
-        </BlockField>
-      </Block>
-
-      <Block Icon={FaCog} bigMargin solid title="<BlockField> - Properties">
-        <BlockField title="title">
-          string - blockfield title
-        </BlockField>
+      <Block>
+        <BasicTable icon={FaCog} title="<BasicTable> - properties" data={blockProps} />
       </Block>
 
       <Block bigMargin>
@@ -84,7 +57,7 @@ export function DocBlock() {
       </Block>
 
       <Block bigMargin>
-        <Block solid title="block title">
+        <Block solid title="Block title">
           <Text>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit.
             Ab, quasi perferendis. Natus rem adipisci facere in, expedita
@@ -96,16 +69,7 @@ export function DocBlock() {
       </Block>
 
       <Block bigMargin>
-        <Block solid title="block title">
-          <BlockField title="field1"> content1 </BlockField>
-          <BlockField title="field2"> content2 </BlockField>
-          <BlockField title="field3"> content3 </BlockField>
-        </Block>
-        <Syntax code={example4} />
-      </Block>
-
-      <Block bigMargin>
-        <Block solid Icon={FaHeart} title="Block title">
+        <Block solid icon={FaHeart} title="Block title">
           Block title with icon
         </Block>
         <Syntax code={example5} />
@@ -127,7 +91,7 @@ export function DocBlock() {
         <Block title="Block title" solid col2>
           {/* Column 1 */}
           <div>
-            <h1> Column 1 </h1><br/>
+            <h1> Column 1 </h1><br />
             <p>
               Lorem ipsum dolor sit amet consectetur
               adipisicing elit. Dolor necessitatibus eaque
@@ -138,7 +102,7 @@ export function DocBlock() {
 
           {/* Column 2 */}
           <div>
-            <h1> Column 2 </h1><br/>
+            <h1> Column 2 </h1><br />
             <p>
               Lorem ipsum dolor sit amet consectetur
               adipisicing elit. Dolor necessitatibus eaque

@@ -29,6 +29,10 @@ export const example6 = `
 <Button success> Success button </Button>
 `
 
+export const example61 = `
+<Button warn> Warning button </Button>
+`
+
 export const example7 = `
 <Button loading={true}> Loading </Button>
 `

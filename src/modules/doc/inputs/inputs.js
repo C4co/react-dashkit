@@ -1,17 +1,17 @@
 import React from "react"
+
 import {
   Block,
-  BlockField,
   Syntax,
   Input,
   InputPassword,
   TextArea,
-  A
+  BasicTable,
 } from "../../../components"
 
 import { DocTemplate } from "../../../templates"
 
-import { FaUser, FaCog, FaDiceD6 } from "react-icons/fa"
+import { FaUser, FaCog } from "react-icons/fa"
 
 import {
   import1,
@@ -25,6 +25,8 @@ import {
   example8
 } from "./inputs-examples"
 
+import { tableProps } from "./inputs-props"
+
 export function DocInputs(){
   return (
     <DocTemplate actived="inputs" title="Inputs">
@@ -33,38 +35,8 @@ export function DocInputs(){
         <Syntax code={import1} arrow={false} />
       </Block>
 
-      <Block Icon={FaCog} bigMargin title="<inputs> - properties" solid>
-        <BlockField title="label">
-          string - input label
-        </BlockField>
-
-        <BlockField title="placeholder">
-          string - input placeholder
-        </BlockField>
-
-        <BlockField title="icon">
-          reactIcon - icon inside input
-        </BlockField>
-
-        <BlockField title="error">
-          boolean - input on error mode
-        </BlockField>
-
-        <BlockField title="success">
-          boolean - input on success mode
-        </BlockField>
-
-        <BlockField title="InputComponent">
-          component - set default input component
-        </BlockField>
-      </Block>
-
-      <Block Icon={FaDiceD6} bigMargin solid title="Dependencies">
-        <BlockField>
-          <A href="https://github.com/react-icons/react-icons">
-            React icons
-          </A>
-        </BlockField>
+      <Block>
+        <BasicTable icon={FaCog} data={tableProps} title="<Input> - properties" />
       </Block>
 
       <Block bigMargin>
@@ -100,13 +72,13 @@ export function DocInputs(){
         <Input
           icon={FaUser}
           disabled
-          label="Input password"
+          label="Input disabled"
           placeholder="Enter your password" />
         <Syntax code={example5}/>
       </Block>
 
       <Block bigMargin>
-        <InputPassword label="Input disabled" placeholder="Enter your password" />
+        <InputPassword label="Input password" placeholder="Enter your password" />
         <Syntax code={example6}/>
       </Block>
 

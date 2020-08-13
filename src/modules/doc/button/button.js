@@ -3,13 +3,11 @@ import React from "react"
 import {
   Button,
   Block,
-  BlockField,
   Syntax,
-  A,
-  Text
+  BasicTable
 } from "../../../components"
 
-import { FaStar, FaCog, FaDiceD6 } from "react-icons/fa"
+import { FaStar, FaCog } from "react-icons/fa"
 
 import { DocTemplate } from "../../../templates"
 
@@ -21,6 +19,7 @@ import {
   example4,
   example5,
   example6,
+  example61,
   example7,
   example8,
   example9,
@@ -28,46 +27,18 @@ import {
   example11,
 } from "./button-examples"
 
-export function DocButtons () {
+import { buttonProps } from "./button-props"
+
+export function DocButtons() {
   return (
     <DocTemplate actived="buttons" title="Buttons">
 
       <Block bigMargin>
-        <Syntax arrow={false} code={import1}/>
+        <Syntax arrow={false} code={import1} />
       </Block>
 
-      <Block Icon={FaCog} bigMargin title="<Button> - properties" solid>
-        <BlockField title="iconLeft">
-          react-icon - Inset a icon in left side of the button
-        </BlockField>
-
-        <BlockField title="iconRight">
-          react-icon - Inset a icon in left side of the button
-        </BlockField>
-
-        <BlockField title="loading">
-          boolean - button on loadmode
-        </BlockField>
-
-        <BlockField title="danger">
-          boolean - button on danger mode
-        </BlockField>
-
-        <BlockField title="success">
-          boolean - button on success mode
-        </BlockField>
-
-        <BlockField title="full">
-          boolean - button on full mode
-        </BlockField>
-      </Block>
-
-      <Block Icon={FaDiceD6} solid bigMargin title="Dependencies">
-        <BlockField>
-          <Text>
-            <A href="https://react-icons.github.io/react-icons/"> React icons </A>
-          </Text>
-        </BlockField>
+      <Block>
+        <BasicTable icon={FaCog} title="<Button> - properties" data={buttonProps} />
       </Block>
 
       <Block bigMargin>
@@ -101,6 +72,11 @@ export function DocButtons () {
       </Block>
 
       <Block bigMargin>
+        <Button warn> Warning button </Button>
+        <Syntax code={example61} />
+      </Block>
+
+      <Block bigMargin>
         <Button loading={true}> Loading </Button>
         <Syntax code={example7} />
       </Block>
@@ -124,7 +100,6 @@ export function DocButtons () {
         <Button full loading> Full loading </Button>
         <Syntax code={example11} />
       </Block>
-
     </DocTemplate>
   )
 }

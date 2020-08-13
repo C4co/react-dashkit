@@ -4,7 +4,7 @@ import {
   Text,
   Title,
   SubTitle
-} from "../../../components"
+} from "../components"
 `
 
 export const example1 = `
@@ -36,7 +36,13 @@ export const example2 = `
 `
 
 export const example3 = `
-<Title> Title </Title>
+<Title> Default Title </Title>
+<Title h1> Title h1 </Title>
+<Title h2> Title h2 </Title>
+<Title h3> Title h3 </Title>
+<Title h4> Title h4 </Title>
+<Title h5> Title h5 </Title>
+<Title h6> Title h6 </Title>
 `
 
 export const example4 = `

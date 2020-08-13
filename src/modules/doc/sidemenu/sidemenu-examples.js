@@ -1,9 +1,9 @@
 export const import1 = `
 import {
   SideMenu,
-  SideMenuDivision,
+  SideMenuSection,
   SideMenuItem
-} from "../../../components"
+} from "../components"
 `
 
 export const example1 = `
@@ -23,7 +23,7 @@ import {
 
 <SideMenu>
   ...
-  <SideMenuDivision title="Components">
+  <SideMenuSection title="Components">
     <SideMenuItem
       Icon={FaHome}
       actived={actived === "home" ? 1 : 0}
@@ -86,6 +86,6 @@ import {
       to="/doc/sidemenu">
       Sidemenu
     </SideMenuItem>
-  </SideMenuDivision>
+  </SideMenuSection>
 </SideMenu>
 `

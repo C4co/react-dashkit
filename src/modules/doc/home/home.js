@@ -17,7 +17,7 @@ const Github = styled(FaGithub)`
 
 export function DocHome() {
   return (
-    <DocTemplate actived="home" title="React deck">
+    <DocTemplate actived="home" title="React dashkit">
 
       <Block bigMargin>
         <a href="http://github.com">
@@ -26,14 +26,14 @@ export function DocHome() {
       </Block>
 
       <Block solid bigMargin>
-        <Text> Ui kit based on React JS focused to create simple dashboards to small projects </Text>
+        <Text className="no-margin"> Ui kit based on React JS focused to create simple dashboards to small projects </Text>
       </Block>
 
       <Block solid bigMargin title="What's inside?">
         <Text> <A href="#"> React create app </A>  </Text>
         <Text> <A href="#"> React snap </A>  </Text>
         <Text> <A href="#"> Styled Components </A>  </Text>
-        <Text> <A href="#"> React query </A>  </Text>
+        <Text className="no-margin"> <A href="#"> React query </A>  </Text>
       </Block>
     </DocTemplate>
   )

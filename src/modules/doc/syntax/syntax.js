@@ -2,8 +2,8 @@ import React from "react"
 import { FaCog } from "react-icons/fa"
 import {
   Block,
-  BlockField,
-  Syntax
+  Syntax,
+  BasicTable
 } from "../../../components"
 import { DocTemplate } from "../../../templates"
 
@@ -15,6 +15,8 @@ import {
   exampleUsage
 } from "./syntax-examples"
 
+import { syntaxProps } from "./syntax-props"
+
 export function DocSyntax() {
   return (
     <DocTemplate actived="syntax" title="Syntax">
@@ -22,18 +24,8 @@ export function DocSyntax() {
         <Syntax code={import1} arrow={false} />
       </Block>
 
-      <Block Icon={FaCog} solid bigMargin title="<Syntax> - Properties">
-        <BlockField title="code">
-          string-literal - code example
-        </BlockField>
-
-        <BlockField title="lang">
-          string - language syntax
-        </BlockField>
-
-        <BlockField title="arrow">
-          boolean - show arrow at top of component
-        </BlockField>
+      <Block>
+        <BasicTable icon={FaCog} title="<Syntax> - properties" data={syntaxProps} />
       </Block>
 
       <Block solid bigMargin>
