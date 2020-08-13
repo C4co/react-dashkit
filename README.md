@@ -3,7 +3,7 @@
 </p>
 
 <h2 align="center">
-  React dashkit
+  React Dashkit
 </h2>
 
 > basic react ui kit to make simple and clean dashboards
