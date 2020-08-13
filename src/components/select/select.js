@@ -3,6 +3,7 @@ import styled, { css } from "styled-components"
 import { COLORS } from "../../values"
 import { ErrorMessage, Label } from "../extras/extras"
 import { FaAngleDown } from "react-icons/fa"
+import { Alert } from "../alert/alert"
 
 const Container = styled.div`
   position: relative;
@@ -22,26 +23,27 @@ const Arrow = styled(FaAngleDown)`
   top: 15px;
 `
 
-const Data = styled.select`
+const SelectWrapper = styled.select`
   width: 100%;
   display: flex;
   font-family: inherit;
   font-size: 1em;
   background-color: ${COLORS.WHITE};
-  border: solid ${COLORS.INPUT_BORDER} 2px;
+  border: solid ${COLORS.INPUT_BORDER} 1px;
   padding: 13px;
   border-radius: 3px;
   color: ${COLORS.TEXT_DARK};
   -moz-appearance: none;
   -webkit-appearance: none;
+  box-shadow: 0px 2px 6px -3px ${COLORS.BLOCK_SHADOW};
 
   &:focus{
     outline: none;
-    border: solid ${COLORS.INPUT_FOCUS} 2px;
+    border: solid ${COLORS.INPUT_FOCUS} 1px;
   }
 
   ${props => props.error && css`
-    border: solid ${COLORS.DANGER} 2px;
+    border: solid ${COLORS.DANGER} 1px;
   `}
 `
 
@@ -50,9 +52,8 @@ const Data = styled.select`
  * @param {String} placeholder - select placeholder
  * @param {String} label - select label
  * @param {String} errorMessage - select error message
- * @param {Boolean} error - select error state
+ * @param {Boolean} error - select on error mode
  */
-
 
 export function Select ({
   options,
@@ -62,13 +63,20 @@ export function Select ({
   error,
   ...props
 }) {
+
+  if(!options.length){
+    return (
+      <Alert danger title="Error"> Select need valid options </Alert>
+    )
+  }
+
   return (
     <Container>
       { label && <Label> {label} </Label> }
 
       <Content>
         <Arrow />
-        <Data
+        <SelectWrapper
           error={error}
           defaultValue={false}
           {...props}>
@@ -83,7 +91,7 @@ export function Select ({
               }
             </>
           }
-        </Data>
+        </SelectWrapper>
       </Content>
 
       {errorMessage && <ErrorMessage> {errorMessage} </ErrorMessage>}

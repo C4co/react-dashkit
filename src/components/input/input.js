@@ -17,12 +17,13 @@ const Content = styled.div`
     width: 100%;
     display: flex;
     padding: 13px;
-    border: solid ${COLORS.INPUT_BORDER} 2px;
+    border: solid ${COLORS.INPUT_BORDER} 1px;
     font-size: 1em;
     border-radius: 3px;
     font-family: inherit;
     color: ${COLORS.TEXT_DARK};
     background-color: ${COLORS.WHITE};
+    box-shadow: 0px 2px 6px -3px ${COLORS.BLOCK_SHADOW};
 
     ::placeholder{
       color: ${COLORS.INPUT_PLACEHOLDER};
@@ -31,12 +32,12 @@ const Content = styled.div`
 
     &:disabled{
       cursor: not-allowed;
-      opacity: 0.5;
+      background-color: ${COLORS.INPUT_DISABLED};
     }
 
     &:focus{
       outline: none;
-      border: solid ${COLORS.INPUT_FOCUS} 2px;
+      border: solid ${COLORS.INPUT_FOCUS} 1px;
     }
 
     ${props => props.hasicon && css`
@@ -44,13 +45,21 @@ const Content = styled.div`
     `}
 
     ${props => props.error && css`
-      border: solid ${COLORS.DANGER} 2px;
+      border: solid ${COLORS.DANGER} 1px;
     `}
 
     ${props => props.success && css`
-      border: solid ${COLORS.SUCCESS} 2px;
+      border: solid ${COLORS.SUCCESS} 1px;
     `}
   }
+`
+
+const InputIcon = styled.div`
+  color: ${COLORS.INPUT_ICON};
+  position: absolute;
+  font-size: 18px;
+  left: 12px;
+  display: flex;
 `
 
 /**
@@ -73,30 +82,21 @@ export function Input ({
   ...props
 }) {
 
-  let Icon = styled.span``
+  const Icon = icon
   const hasIcon = icon ? "true" : ""
-
-  if (icon) {
-    Icon = styled(icon)`
-      color: ${COLORS.INPUT_ICON};
-      position: absolute;
-      font-size: 18px;
-      left: 12px;
-    `
-  }
 
   return (
     <Container>
       { label && <Label> {label} </Label> }
 
       <Content hasicon={hasIcon} error={error} success={success}>
-        { icon && <Icon /> }
-
         {
           InputComponent
             ? <InputComponent />
             : <input type={type} placeholder={placeholder} {...props} />
         }
+
+        { icon && <InputIcon className="dashkit__input-icon"> <Icon /> </InputIcon> }
       </Content>
 
       { errorMessage && <ErrorMessage> { errorMessage } </ErrorMessage> }

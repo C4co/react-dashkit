@@ -24,10 +24,11 @@ const Wrapper = styled.div`
   }
 
   .react-datepicker{
-    transform: scale(1.1, 1.1);
+    /* transform: scale(1.1, 1.1); */
     border: none;
     font-family: "inter", Arial, Helvetica, sans-serif;
     color: red;
+    border: solid ${COLORS.INPUT_FOCUS} 1px;
   }
 
   .react-datepicker__day-name,
@@ -80,7 +81,7 @@ const Wrapper = styled.div`
     width: 100% !important;
     display: flex;
     padding: 13px;
-    border: solid ${COLORS.INPUT_BORDER} 2px;
+    border: solid ${COLORS.INPUT_BORDER} 1px;
     font-size: 1em;
     border-radius: 3px;
     font-family: inherit;
@@ -88,6 +89,7 @@ const Wrapper = styled.div`
     color: ${COLORS.TEXT_DARK};
     background-color: ${COLORS.WHITE};
     padding-left: 41px;
+    box-shadow: 0px 2px 6px -3px ${COLORS.BLOCK_SHADOW};
 
     &:disabled{
       background: ${COLORS.INPUT_DISABLED};
@@ -97,11 +99,11 @@ const Wrapper = styled.div`
     &:focus{
       outline: none;
       width: 100%;
-      border: solid ${COLORS.INPUT_FOCUS} 2px;
+      border: solid ${COLORS.INPUT_FOCUS} 1px;
     }
 
     ${props => props.error && css`
-      border: solid ${COLORS.DANGER} 2px;
+      border: solid ${COLORS.DANGER} 1px;
     `}
   }
 `
@@ -139,11 +141,12 @@ export function DatePicker ({label, error, errorMessage, ...props }) {
       <Content>
         <ReactDatePicker
           {...props}
-          withPortal
+          // withPortal
+          showPopperArrow={false}
           onFocus={(e) => e.target.readOnly = true}
           autoComplete="off"
         />
-        <Icon />
+        <Icon className="dashkit__datepicker" />
       </Content>
 
       { errorMessage && <ErrorMessage> {errorMessage} </ErrorMessage> }

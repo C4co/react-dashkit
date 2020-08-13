@@ -6,15 +6,17 @@ function ID () {
   return "_" + Math.random().toString(36).substr(2, 9)
 }
 
-const Group = styled.div``
+const Group = styled.div`
+  display: grid;
+  grid-auto-columns: auto;
+  gap: 20px;
+`
 
 const Element = styled.div`
   display: flex;
   align-items: center;
   position: relative;
-  padding-left: 40px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-left: 50px;
 
   &:last-of-type{
     margin-bottom: 0;
@@ -59,32 +61,26 @@ const Element = styled.div`
 const Title = styled.p`
   color: ${COLORS.TEXT_DARK};
   font-weight: bold;
-  margin: 0 0 2px 0;
+  margin: 0 0 5px 0;
 `
 
 const Description = styled.p`
   margin: 0;
+  font-size: 0.9em;
+  font-style: oblique;
 `
 
-const Label = styled.h1`
-  font-size: 1.1em;
-  color: ${COLORS.TEXT_DARK};
-  margin-bottom: 10px;
-`
-
-export function Radio({ options, label, ...props }){
+export function Radio({ options, ...props }){
   const name = ID()
 
   return (
     <Group>
-      { label && <Label> { label } </Label> }
-
       { options.map((item) => {
         return (
           <Element key={item.value}>
             <input
               {...props}
-              name={`deck-radio-${name}`}
+              name={`dashkit-radio-${name}`}
               type="radio"
               id={`${item.key}-${item.value}-${name}`}
               value={item.value} />

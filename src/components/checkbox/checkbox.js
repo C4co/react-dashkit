@@ -8,9 +8,11 @@ function ID () {
 
 const Wrapper = styled.div`
   display: flex;
+  align-items: center;
   position: relative;
   margin-bottom: 15px;
-  padding: 4px 0 4px 0;
+  padding-bottom: 3px;
+  padding-top: 3px;
 `
 
 const Check = styled.input`
@@ -26,7 +28,6 @@ const Check = styled.input`
     -webkit-transform: translate(0%,-50%);
     transform: translate(0%,-50%);
     top: 50%;
-    left: 0px;
     content: "";
     border: solid ${COLORS.INPUT_BORDER} 3px;
     box-shadow: inset 0 0 0 3px #fff;
@@ -47,8 +48,11 @@ const Check = styled.input`
 `
 
 const Label = styled.label`
-  padding-left: 41px;
+  padding-left: 50px;
   position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 
   ${props => props.disabled && css`
     text-decoration: line-through;
@@ -58,11 +62,17 @@ const Label = styled.label`
 const Title = styled.p`
   font-weight: bold;
   color: ${COLORS.TEXT_DARK};
-  margin: 0;
+  display: flex;
+
+  ${props => props.description && css `
+    margin-bottom: 5px;
+  `}
 `
 
 const Description = styled.p`
   color: ${COLORS.TEXT};
+  font-size: 0.9em;
+  font-style: oblique;
   margin: 0;
 `
 
@@ -77,7 +87,7 @@ export function Checkbox ({ label, description, ...props }) {
     <Wrapper>
       <Check type="checkbox" {...props} id={id} />
       <Label disabled={props.disabled} htmlFor={id}>
-        <Title> {label} </Title>
+        <Title description={description}> {label} </Title>
         {description && <Description> {description} </Description>}
       </Label>
     </Wrapper>

@@ -14,6 +14,7 @@ export const SideMenu = styled.section`
   margin-left: 0px;
   transition: all 0.3s linear 0s;
   font-size: 0.95em;
+  padding-bottom: 50px;
 
   @media(max-width: 1000px){
     margin-left: -240px;
@@ -46,19 +47,21 @@ export const SideMenuItemWrapper = styled(Link)`
 `
 
 const SideMenuItemIcon = styled.div`
-  height: 20px;
   font-size: 18px;
   margin-right: 15px;
+  display: flex;
 
   .svg{
     border: solid red 1px;
   }
 `
 
-export function SideMenuItem({ actived, to, Icon, children }){
+export function SideMenuItem({ actived, to, icon, children }){
+  const Icon = icon
+
   return (
     <SideMenuItemWrapper to={to} actived={actived}>
-      { Icon && <SideMenuItemIcon> <Icon /> </SideMenuItemIcon>}
+      { icon && <SideMenuItemIcon> <Icon /> </SideMenuItemIcon>}
       {children}
     </SideMenuItemWrapper>
   )
@@ -66,7 +69,7 @@ export function SideMenuItem({ actived, to, Icon, children }){
 
 // <SideMenuDivision />
 
-const SideMenuDivisionTitle = styled.h1`
+const SideMenuSectionTitle = styled.h1`
   margin-bottom: 10px;
   font-size: 1em;
   color: ${COLORS.WHITE};
@@ -78,15 +81,15 @@ const SideMenuDivisionTitle = styled.h1`
   border-bottom: solid ${lighten(0.1, COLORS.SIDEMENU_BACKGROUND)} 1px;
 `
 
-const SideMenuDivisionWrapper = styled.nav`
-  padding: 30px 15px 30px 15px;
+const SideMenuSectionWrapper = styled.nav`
+  padding: 10px 15px 10px 15px;
 `
 
-export function SideMenuDivision({ title, children }){
+export function SideMenuSection({ title, children }){
   return (
-    <SideMenuDivisionWrapper>
-      { title && <SideMenuDivisionTitle> {title} </SideMenuDivisionTitle> }
+    <SideMenuSectionWrapper>
+      { title && <SideMenuSectionTitle> {title} </SideMenuSectionTitle> }
       {children}
-    </SideMenuDivisionWrapper>
+    </SideMenuSectionWrapper>
   )
 }

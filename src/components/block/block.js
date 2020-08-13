@@ -1,37 +1,32 @@
 import React from "react"
 import styled, { css } from "styled-components"
-import { COLORS, SIZE } from "../../values"
-
-// Block
+import { COLORS } from "../../values"
 
 const Container = styled.div`
   width: 100%;
-  margin-bottom: ${SIZE.BLOCK.MARGIN};
-  color: ${COLORS.TEXT};
-
-  &:last-of-type{
-    margin-bottom: 0;
-  }
+  margin-bottom: 20px;
 
   ${props => props.solid && css`
     background-color: ${COLORS.BLOCK_BACKGROUND};
     border-radius: 3px;
-    padding: ${SIZE.BLOCK.PADDING};
-    box-shadow: 0px 2px 6px -3px ${COLORS.BLOCK_SHADOW};
+    box-shadow: 0px 2px 2px 0px ${COLORS.BLOCK_SHADOW};
   `}
 
   ${props => props.bigMargin && css`
-    margin-top: ${SIZE.BLOCK.BIG_MARGIN};
-    margin-bottom: ${SIZE.BLOCK.BIG_MARGIN};
+    margin-top: 50px;
+    margin-bottom: 50px;
+  `}
+
+  ${props => props.noMargin && css`
+    margin-bottom: 0px;
   `}
 `
 
 const Header = styled.header`
   display: flex;
   align-items: center;
-  padding-bottom: ${SIZE.BLOCK.PADDING};
-  margin-bottom: ${SIZE.BLOCK.PADDING};
-  border-bottom: solid ${COLORS.BLOCK_BORDER} 1px;
+  padding: 20px;
+  border-bottom: solid ${COLORS.BORDER} 1px;
 `
 
 const HeaderIcon = styled.div`
@@ -47,27 +42,24 @@ const Content = styled.div`
   flex-direction: column;
 
   ${props => props.solid && css`
-    padding: 0px 0px 0px 0px;
+    padding: 20px;
   `}
 
   ${props => props.col2 && css`
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: ${SIZE.BLOCK.GAP};
+    column-gap: 20px;
   `}
 `
 
 const Title = styled.h1`
-  font-size: 0.89em;
-  text-transform: uppercase;
+  font-size: 1em;
   color: ${COLORS.TEXT_DARK};
-  letter-spacing: 0.1em;
 `
 
 const Footer = styled.div`
-  padding-top: ${SIZE.BLOCK.PADDING};
-  margin-top: ${SIZE.BLOCK.PADDING};
-  border-top: solid ${COLORS.BLOCK_BORDER} 1px;
+  padding: 20px;
+  border-top: solid ${COLORS.BORDER} 1px;
 `
 
 /**
@@ -77,72 +69,37 @@ const Footer = styled.div`
  * @param {any} footer - block footer elements
  * @param {boolean} col2 - divide block in 2 columns
  * @param {reactIcon} icon - adding icon in title
+ * @param {boolean} bigMargin - bottom margin with 50px
+ * @param {boolean} noMargin - remove bottom margin
  */
 
 export function Block({
   children,
   solid,
-  Icon,
+  icon,
   bigMargin,
   title,
   footer,
-  col2
+  col2,
+  noMargin
 }){
+  const Icon = icon
+
   return (
-    <Container solid={solid} bigMargin={bigMargin}>
+    <Container solid={solid} bigMargin={bigMargin} noMargin={noMargin}>
       {
         (solid && title) &&
         <Header>
-          { Icon && <HeaderIcon> <Icon /> </HeaderIcon> }
-          <Title> {title} </Title>
+          { Icon && <HeaderIcon> <Icon/> </HeaderIcon> }
+          <Title> { title } </Title>
         </Header>
       }
 
-      <Content solid={solid} col2={col2}>
+      <Content solid={ solid } col2={col2}>
         { children }
       </Content>
 
-      { (solid && footer) && <Footer>{footer}</Footer>}
+      { (solid && footer) && <Footer> { footer } </Footer> }
     </Container>
-  )
-}
-
-Block.defaultProps = {
-  solid: false,
-  title: false,
-  footer: false
-}
-
-// <BlockField>
-
-const BlockFieldContent = styled.div`
-  margin-bottom: 15px;
-  border-bottom: solid ${COLORS.BLOCK_BORDER} 1px;
-  padding-bottom: 15px;
-
-  &:last-of-type{
-    border: none;
-    margin-bottom: 0;
-    padding-bottom: 0;
-  }
-`
-
-const BlockFieldTitle = styled.p`
-  margin-bottom: 5px;
-  color: ${COLORS.TEXT_DARK};
-  font-weight: bold;
-`
-
-/**
- * @param {any} children - react children
- * @param {string} title - block title
- */
-
- export function BlockField({title, children}){
-  return(
-    <BlockFieldContent>
-      <BlockFieldTitle> {title} </BlockFieldTitle>
-      {children}
-    </BlockFieldContent>
   )
 }

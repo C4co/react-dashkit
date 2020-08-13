@@ -10,17 +10,18 @@ const Data = styled.textarea`
   width: 100%;
   display: flex;
   padding: 13px;
-  border: solid ${COLORS.INPUT_BORDER} 2px;
+  border: solid ${COLORS.INPUT_BORDER} 1px;
   font-size: 1em;
   border-radius: 3px;
   font-family: inherit;
   color: ${COLORS.TEXT_DARK};
   background-color: ${COLORS.WHITE};
   min-height: 120px;
+  box-shadow: 0px 2px 6px -3px ${COLORS.BLOCK_SHADOW};
 
   &:focus{
     outline: none;
-    border: solid ${COLORS.INPUT_FOCUS} 2px;
+    border: solid ${COLORS.INPUT_FOCUS} 1px;
   }
 
   ::placeholder{
@@ -29,11 +30,11 @@ const Data = styled.textarea`
   }
 
   ${props => props.error && css`
-    border: solid ${COLORS.DANGER} 2px;
+    border: solid ${COLORS.DANGER} 1px;
   `}
 
   ${props => props.success && css`
-    border: solid ${COLORS.SUCCESS} 2px;
+    border: solid ${COLORS.SUCCESS} 1px;
   `}
 `
 

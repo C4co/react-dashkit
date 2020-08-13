@@ -3,7 +3,11 @@ import styled from "styled-components"
 import { Prism } from "react-syntax-highlighter";
 import { okaidia } from "react-syntax-highlighter/dist/esm/styles/prism";
 
-const Container = styled.div``
+const Container = styled.div`
+  *{
+    font-family: "Fira Code" !important;
+  }
+`
 
 const Arrow = styled.div`
   top: -20px;
@@ -31,7 +35,6 @@ const SyntaxDescription = styled.span`
   border-radius: 3px;
   background-color: #262A3F;
   border-bottom: solid rgba(255, 255, 255, 0.1) 1px;
-  font-family: 'Fira Code', monospace;
 `
 
 const SyntaxCode = styled(Prism)`
@@ -43,10 +46,6 @@ const SyntaxCode = styled(Prism)`
 
   .react-syntax-highlighter-line-number{
     opacity: 0.5;
-  }
-
-  *{
-    font-family: 'Fira Code', monospace;
   }
 `
 

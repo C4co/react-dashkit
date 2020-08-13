@@ -6,4 +6,5 @@ export const Main = styled.div`
   min-height: 100vh;
   background-color: ${COLORS.BACKGROUND};
   position: relative;
+  color: ${COLORS.TEXT};
 `

@@ -1,38 +1,67 @@
-import styled from "styled-components"
-import { COLORS, SIZE } from "../../values"
-import { lighten } from "polished"
+import styled, { css } from "styled-components"
+import { COLORS } from "../../values"
+import { Link as RouterLink } from "react-router-dom"
 
 export const Text = styled.p`
   font-size: 1em;
   line-height: 1.7em;
-  margin-bottom: ${SIZE.TEXT.MARGIN};
+  margin-bottom: 20px;
   color: ${COLORS.TEXT};
-
-  &:last-of-type{
-    margin-bottom: 0;
-  }
 `
 
 export const Title = styled.h1`
   font-size: 2.3em;
   color: ${COLORS.TEXT_DARK} !important;
-  margin-bottom: ${SIZE.TEXT.MARGIN};
+  margin-bottom: 20px;
   color: ${COLORS.TEXT_DARK};
+
+  ${props => props.h1 && css `
+    font-size: 2.5em;
+  `}
+
+  ${props => props.h2 && css `
+    font-size: 2.2em;
+  `}
+
+
+  ${props => props.h3 && css `
+    font-size: 1.9em;
+  `}
+
+  ${props => props.h4 && css `
+    font-size: 1.6em;
+  `}
+
+  ${props => props.h5 && css `
+    font-size: 1.3em;
+  `}
+
+  ${props => props.h6 && css `
+    font-size: 1em;
+  `}
 `
 
 export const SubTitle = styled.h2`
   font-size: 1.6em;
   font-weight: normal;
-  margin-bottom: ${SIZE.TEXT.MARGIN};
+  margin-bottom: 20px;
   color: ${COLORS.TEXT_DARK};
 `
 
 export const A = styled.a`
   text-decoration: none;
   color: ${COLORS.LINK};
-  border-bottom: solid ${lighten(0.3, COLORS.LINK)} 4px;
 
   &:hover{
-    border-bottom: solid ${lighten(0, COLORS.LINK)} 4px;
+    text-decoration: underline;
+  }
+`
+
+export const Link = styled(RouterLink)`
+  text-decoration: none;
+  color: ${COLORS.LINK};
+
+  &:hover{
+    text-decoration: underline;
   }
 `
