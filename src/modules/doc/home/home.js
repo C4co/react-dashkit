@@ -30,10 +30,10 @@ export function DocHome() {
       </Block>
 
       <Block solid bigMargin title="What's inside?">
-        <Text> <A href="#"> React create app </A>  </Text>
-        <Text> <A href="#"> React snap </A>  </Text>
-        <Text> <A href="#"> Styled Components </A>  </Text>
-        <Text className="no-margin"> <A href="#"> React query </A>  </Text>
+        <Text> <A target="__blank" href="https://github.com/facebook/create-react-app"> React create app </A>  </Text>
+        <Text> <A target="__blank" href="https://github.com/stereobooster/react-snap"> React snap </A>  </Text>
+        <Text> <A target="__blank" href="https://styled-components.com/"> Styled Components </A>  </Text>
+        <Text className="no-margin"> <A href="https://github.com/tannerlinsley/react-query" target="__blank"> React query </A>  </Text>
       </Block>
     </DocTemplate>
   )
