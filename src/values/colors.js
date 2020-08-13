@@ -1,31 +1,34 @@
+
 export const COLORS = {
   PRIMARY: "#1E68D7",
   BACKGROUND: "#EEEEEE",
-  BORDER: "#CCCCCC",
+  BORDER: "#E5E5E5",
 
   // colors
   WHITE: "#FFFFFF",
   BLACK: "#000000",
 
   // type
-  TEXT: "#444444",
+  TEXT: "#4C4C4C",
   TEXT_DARK: "#313131",
   LINK: "#0050FF",
 
   // states
+  INFO: "#296BFF",
   DANGER: "#DD3737",
   SUCCESS: "#2E9054",
+  WARN: "#CE8530",
 
   // input
-  INPUT_BORDER: "#AEAEAE",
+  INPUT_BORDER: "#B2B2B2",
   INPUT_ICON: "#B2B2B2",
   INPUT_PLACEHOLDER: "#7D7D7D",
   INPUT_FOCUS: "#3A85F3",
-  INPUT_DISABLED: "#D5D5D5",
+  INPUT_DISABLED: "#CDCDCD",
 
   // block
   BLOCK_BACKGROUND: "#FFFFFF",
-  BLOCK_SHADOW: "#C7C7C7",
+  BLOCK_SHADOW: "#DDDDDD",
   BLOCK_BORDER: "#E5E5E5",
 
   // sidemenu
