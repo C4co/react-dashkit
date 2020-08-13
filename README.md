@@ -2,11 +2,13 @@
   <img alt="react" src="https://i.imgur.com/VG6A5rz.png" width="200" />
 </p>
 
-<h1 align="center">
+<h2 align="center">
   React dashkit
-</h1>
+</h2>
 
 > basic react ui kit to make simple and clean dashboards
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/488c5c39-b4bd-4dbc-b0c2-421d562e2a85/deploy-status)](https://app.netlify.com/sites/dashkit/deploys)
 
 #### What's inside?
 
