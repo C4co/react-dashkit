@@ -32,7 +32,15 @@ import {
   DocBlock,
   DocSideMenu,
   DocDatepicker,
-  DocSyntax
+  DocSyntax,
+  DocGrid,
+  DocForm,
+  DocSpinner,
+  DocTable,
+  DocBadge,
+  DocAlert,
+  DocAvatar,
+  DocClasses
 } from "../modules"
 
 export function Routing () {
@@ -57,6 +65,14 @@ export function Routing () {
         <Route path="/doc/sidemenu" component={DocSideMenu} />
         <Route path="/doc/datepicker" component={DocDatepicker} />
         <Route path="/doc/syntax" component={DocSyntax} />
+        <Route path="/doc/grid" component={DocGrid} />
+        <Route path="/doc/form" component={DocForm} />
+        <Route path="/doc/spinner" component={DocSpinner} />
+        <Route path="/doc/table" component={DocTable} />
+        <Route path="/doc/badge" component={DocBadge} />
+        <Route path="/doc/alert" component={DocAlert} />
+        <Route path="/doc/avatar" component={DocAvatar} />
+        <Route path="/doc/classes" component={DocClasses} />
 
         {/* Public */}
         <Route path="/login" component={AuthLogin} />
