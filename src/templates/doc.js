@@ -5,7 +5,7 @@ import styled from "styled-components"
 import {
   Main,
   SideMenu,
-  SideMenuDivision,
+  SideMenuSection,
   SideMenuItem
 } from "../components"
 
@@ -22,7 +22,15 @@ import {
   FaThLarge,
   FaColumns,
   FaCalendarAlt,
-  FaCode
+  FaCode,
+  FaBorderAll,
+  FaAlignJustify,
+  FaSpinner,
+  FaTable,
+  FaStopCircle,
+  FaExclamationTriangle,
+  FaSmileBeam,
+  FaCss3
 } from "react-icons/fa"
 
 const DocContainer = styled.section`
@@ -41,7 +49,7 @@ const DocLogo = styled.div`
 `
 
 const DocContent = styled.div`
-  max-width: 700px;
+  max-width: 800px;
   width: 100%;
   margin: 0 auto;
   padding: 50px 15px 50px 15px;
@@ -56,8 +64,6 @@ const DocTitle = styled.h1`
 `
 
 export function DocTemplate({ actived, children, title }){
-  console.log(IMAGES.DECK_LOGO)
-
   return (
     <Main>
       <DocContainer>
@@ -65,84 +71,144 @@ export function DocTemplate({ actived, children, title }){
           <DocLogo>
             <img src={IMAGES.DECK_LOGO} alt="logo"/>
           </DocLogo>
-          <SideMenuDivision title="Components">
+
+          <SideMenuSection title="Components">
             <SideMenuItem
-              Icon={FaHome}
+              icon={FaHome}
               actived={actived === "home" ? 1 : 0}
               to="/doc/home">
               Home
             </SideMenuItem>
 
             <SideMenuItem
-              Icon={FaFont}
+              icon={FaFont}
               actived={actived === "typography" ? 1 : 0}
               to="/doc/typography">
               Typography
             </SideMenuItem>
 
             <SideMenuItem
-              Icon={FaEdit}
+              icon={FaEdit}
               actived={actived === "inputs" ? 1 : 0}
               to="/doc/inputs">
               Inputs
             </SideMenuItem>
 
             <SideMenuItem
-              Icon={FaCheckSquare}
+              icon={FaCheckSquare}
               actived={actived === "check" ? 1 : 0}
               to="/doc/checkbox">
               Checkbox
             </SideMenuItem>
 
             <SideMenuItem
-              Icon={FaRegDotCircle}
+              icon={FaRegDotCircle}
               actived={actived === "radio" ? 1 : 0}
               to="/doc/radio">
               Radio
             </SideMenuItem>
 
             <SideMenuItem
-              Icon={FaSquare}
+              icon={FaSquare}
               actived={actived === "buttons" ? 1 : 0}
               to="/doc/buttons">
               Buttons
             </SideMenuItem>
 
             <SideMenuItem
-              Icon={FaChevronDown}
+              icon={FaChevronDown}
               actived={actived === "select" ? 1 : 0}
               to="/doc/select">
               Select
             </SideMenuItem>
 
             <SideMenuItem
-              Icon={FaThLarge}
+              icon={FaThLarge}
               actived={actived === "block" ? 1 : 0}
               to="/doc/block">
               Block
             </SideMenuItem>
 
             <SideMenuItem
-              Icon={FaColumns}
+              icon={FaColumns}
               actived={actived === "sidemenu" ? 1 : 0}
               to="/doc/sidemenu">
               Sidemenu
             </SideMenuItem>
 
             <SideMenuItem
-              Icon={FaCalendarAlt}
+              icon={FaCalendarAlt}
               actived={actived === "datepicker" ? 1 : 0}
               to="/doc/datepicker">
               Date Picker
             </SideMenuItem>
 
             <SideMenuItem
-              Icon={FaCode}
+              icon={FaCode}
               actived={actived === "syntax" ? 1 : 0}
               to="/doc/syntax">
               Syntax
             </SideMenuItem>
-          </SideMenuDivision>
+
+            <SideMenuItem
+              icon={FaBorderAll}
+              actived={actived === "grid" ? 1 : 0}
+              to="/doc/grid">
+              Grid
+            </SideMenuItem>
+
+            <SideMenuItem
+              icon={FaAlignJustify}
+              actived={actived === "form" ? 1 : 0}
+              to="/doc/form">
+              Form
+            </SideMenuItem>
+
+            <SideMenuItem
+              icon={FaSpinner}
+              actived={actived === "spinner" ? 1 : 0}
+              to="/doc/spinner">
+              Spinner
+            </SideMenuItem>
+
+            <SideMenuItem
+              icon={FaTable}
+              actived={actived === "table" ? 1 : 0}
+              to="/doc/table">
+              Table
+            </SideMenuItem>
+
+            <SideMenuItem
+              icon={FaStopCircle}
+              actived={actived === "badge" ? 1 : 0}
+              to="/doc/badge">
+              Badge
+            </SideMenuItem>
+
+            <SideMenuItem
+              icon={FaExclamationTriangle}
+              actived={actived === "alert" ? 1 : 0}
+              to="/doc/alert">
+              Alert
+            </SideMenuItem>
+
+            <SideMenuItem
+              icon={FaSmileBeam}
+              actived={actived === "Avatar" ? 1 : 0}
+              to="/doc/avatar">
+              Avatar
+            </SideMenuItem>
+          </SideMenuSection>
+
+          <SideMenuSection title="Helpers">
+            <SideMenuItem
+              icon={FaCss3}
+              actived={actived === "classes" ? 1 : 0}
+              to="/doc/classes">
+              CSS Classes
+            </SideMenuItem>
+          </SideMenuSection>
+
         </SideMenu>
         <DocContent>
           {title && <DocTitle> {title} </DocTitle>}
