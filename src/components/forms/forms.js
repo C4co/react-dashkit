@@ -1,9 +1,9 @@
 import React from "react"
 import styled, { css } from "styled-components"
 import { COLORS } from "../../values"
-import { FaExclamationCircle } from "react-icons/fa"
 import { lighten } from "polished"
 import { Spinner } from "../spinner/spinner"
+import { Alert } from "../alert/alert"
 
 /**
  * @param {String} title - form divider title
@@ -25,23 +25,6 @@ export const FormDivider = styled.div`
   `}
 `
 
-const FormErrorWrapper = styled.div`
-  background: ${COLORS.DANGER};
-  color: ${COLORS.WHITE};
-  display: flex;
-  padding: 15px;
-  font-size: 1em;
-  align-items: center;
-`
-
-const FormErrorIcon = styled(FaExclamationCircle)`
-  margin-right: 10px;
-  opacity: 0.7;
-  font-size: 20px;
-  min-width: 20px;
-  width: 20px;
-`
-
 const FormWrapper = styled.section`
   background-color: ${COLORS.WHITE};
   border-radius: 3px;
@@ -49,6 +32,11 @@ const FormWrapper = styled.section`
   border: solid ${COLORS.WHITE} 1px;
   box-shadow: 0px 2px 2px 0px ${COLORS.BLOCK_SHADOW};
   position: relative;
+  width: 100%;
+
+  ${props => props.noShadow && css`
+    box-shadow: none;
+  `}
 `
 
 const FormContent = styled.div`
@@ -77,10 +65,6 @@ const FormTitle = styled.h1`
   font-size: 1em;
 `
 
-const FormFooter = styled.footer`
-  border: solid red 1px;
-`
-
 const FormIcon = styled.div`
   font-size: 30px;
   display: flex;
@@ -102,7 +86,7 @@ const FormLoading = styled.div`
   left: 0px;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.3);
   z-index: 10;
   color: ${COLORS.WHITE};
   display: flex;
@@ -118,13 +102,14 @@ export function Form({
   errorTitle,
   errorMessage,
   icon,
+  noShadow,
   isLoading
 }){
 
   const Icon = icon
 
   return (
-    <FormWrapper>
+    <FormWrapper noShadow={noShadow}>
       {  isLoading &&
         <FormLoading>
           <Spinner size={40} />
@@ -142,21 +127,12 @@ export function Form({
 
       <FormContent>
         { children }
+
+        {
+          error &&
+            <Alert danger title={errorTitle}> { errorMessage} </Alert>
+        }
       </FormContent>
-
-      {
-        error &&
-        <FormFooter>
-          <FormErrorWrapper>
-            <FormErrorIcon />
-            <div>
-              { errorTitle && <b> {errorTitle} - </b> }
-              { errorMessage }
-            </div>
-          </FormErrorWrapper>
-        </FormFooter>
-      }
-
     </FormWrapper>
   )
 }
