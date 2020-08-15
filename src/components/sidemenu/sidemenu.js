@@ -50,10 +50,6 @@ const SideMenuItemIcon = styled.div`
   font-size: 18px;
   margin-right: 15px;
   display: flex;
-
-  .svg{
-    border: solid red 1px;
-  }
 `
 
 export function SideMenuItem({ actived, to, icon, children }){
