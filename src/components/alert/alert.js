@@ -13,7 +13,7 @@ import { lighten, darken } from "polished"
 const AlertWrapper = styled.div`
   display: flex;
   align-items: center;
-  padding: 13px 15px;
+  padding: 12px 12px;
   color: white;
   background-color: ${COLORS.INFO};
   color: ${darken(0.3, COLORS.INFO)};
