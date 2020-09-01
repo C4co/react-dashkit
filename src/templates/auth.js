@@ -22,14 +22,12 @@ const Container = styled.div`
 const Effect = styled.div`
   width: 100%;
   background-color: ${ COLORS.PRIMARY };
-  background-image: url(${BACKGROUND_FULL});
   background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
 
   @media(max-width: 800px){
-    background-image: url(${BACKGROUND_LIGHT});
     height: 100px;
   }
 `
