@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import { COLORS } from "../../values"
 
 export const Main = styled.div`
@@ -7,4 +7,8 @@ export const Main = styled.div`
   background-color: ${COLORS.BACKGROUND};
   position: relative;
   color: ${COLORS.TEXT};
+
+  ${props => props.white && css`
+    background-color: ${COLORS.WHITE};
+  `}
 `

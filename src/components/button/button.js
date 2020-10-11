@@ -6,7 +6,7 @@ import { Spinner } from "../spinner/spinner"
 
 const ButtonContainer = styled.button`
   border: none;
-  background: ${COLORS.PRIMARY};
+  background: ${COLORS.BUTTON};
   display: flex;
   font-size: 0.82em;
   text-transform: uppercase;
@@ -19,14 +19,15 @@ const ButtonContainer = styled.button`
   color: white;
   letter-spacing: 0.07em;
   height: 40px;
+  font-family: inherit;
   transition: all 0.2s linear 0s;
 
   &:hover{
-    background-color: ${darken(0.08, COLORS.PRIMARY)};
+    background-color: ${darken(0.08, COLORS.BUTTON)};
   }
 
   &:active{
-    background-color: ${darken(0.2, COLORS.PRIMARY)};
+    background-color: ${darken(0.2, COLORS.BUTTON)};
   }
 
   ${props => props.full && css`
@@ -36,6 +37,18 @@ const ButtonContainer = styled.button`
   ${props => props.loading && css`
     opacity: 0.7;
     cursor: not-allowed;
+  `}
+
+  ${props => props.info && css`
+    background-color: ${COLORS.INFO};
+
+    &:hover{
+      background-color: ${darken(0.08, COLORS.INFO)};
+    }
+
+    &:active{
+      background-color: ${darken(0.2, COLORS.INFO)};
+    }
   `}
 
   ${props => props.danger && css`

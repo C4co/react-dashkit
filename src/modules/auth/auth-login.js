@@ -8,7 +8,6 @@ import {
   InputPassword,
   Button,
   Title,
-  Text,
   A
 } from "../../components"
 
@@ -17,7 +16,7 @@ import { FaEnvelope } from "react-icons/fa"
 export function AuthLogin () {
   return (
     <AuthTemplate>
-      <Form error errorMessage="Invalid credentials">
+      <Form noShadow>
         <Title h4 className="no-margin"> Enter </Title>
           <div>
             <A href="#"> Create new account </A>
@@ -31,7 +30,6 @@ export function AuthLogin () {
           </div>
         <Button> Enter </Button>
       </Form>
-      <Text className="margin-top"> Dashkit • 2020 </Text>
     </AuthTemplate>
   )
 }

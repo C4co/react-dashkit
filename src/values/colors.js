@@ -9,11 +9,12 @@ export const COLORS = {
   BLACK: "#000000",
 
   // type
-  TEXT: "#4C4C4C",
-  TEXT_DARK: "#313131",
+  TEXT: "#3B3B3B",
+  TEXT_DARK: "#1C1C1C",
   LINK: "#0050FF",
 
   // states
+  BUTTON: "#262626",
   INFO: "#296BFF",
   DANGER: "#DD3737",
   SUCCESS: "#2E9054",

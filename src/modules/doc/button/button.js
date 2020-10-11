@@ -19,12 +19,13 @@ import {
   example4,
   example5,
   example6,
-  example61,
   example7,
   example8,
   example9,
   example10,
   example11,
+  example12,
+  example13
 } from "./button-examples"
 
 import { buttonProps } from "./button-props"
@@ -62,43 +63,52 @@ export function DocButtons() {
       </Block>
 
       <Block bigMargin>
-        <Button danger> Danger button </Button>
+        <Button info> Info button </Button>
         <Syntax code={example5} />
       </Block>
 
       <Block bigMargin>
-        <Button success> Success button </Button>
+        <Button danger> Danger button </Button>
         <Syntax code={example6} />
       </Block>
 
       <Block bigMargin>
-        <Button warn> Warning button </Button>
-        <Syntax code={example61} />
-      </Block>
-
-      <Block bigMargin>
-        <Button loading={true}> Loading </Button>
+        <Button success> Success button </Button>
         <Syntax code={example7} />
       </Block>
 
       <Block bigMargin>
-        <Button loading={true} danger={true}> Danger Loading </Button>
+        <Button warn> Warning button </Button>
         <Syntax code={example8} />
       </Block>
 
       <Block bigMargin>
-        <Button loading={true} success={true}> Success Loading </Button>
+        <Button loading={true}> Loading </Button>
         <Syntax code={example9} />
       </Block>
 
       <Block bigMargin>
-        <Button full> Full button </Button>
+        <Button loading={true} danger={true}>
+          Danger Loading
+        </Button>
         <Syntax code={example10} />
       </Block>
 
       <Block bigMargin>
-        <Button full loading> Full loading </Button>
+        <Button loading={true} success={true}>
+          Success Loading
+        </Button>
         <Syntax code={example11} />
+      </Block>
+
+      <Block bigMargin>
+        <Button full> Full button </Button>
+        <Syntax code={example12} />
+      </Block>
+
+      <Block bigMargin>
+        <Button full loading> Full loading </Button>
+        <Syntax code={example13} />
       </Block>
     </DocTemplate>
   )

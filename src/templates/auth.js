@@ -6,9 +6,6 @@ import styled from "styled-components"
 
 import { COLORS, IMAGES } from "../values"
 
-const BACKGROUND_FULL = "https://images.unsplash.com/photo-1568301956237-25a54f5f0d21?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100"
-const BACKGROUND_LIGHT = "https://images.unsplash.com/photo-1568301956237-25a54f5f0d21?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=100"
-
 const Container = styled.div`
   width: 100%;
   min-height: 100vh;
@@ -44,15 +41,14 @@ const Logo = styled.img`
 
 const Content = styled.div`
   width: 100%;
-  max-width: 480px;
+  max-width: 1000px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  padding: 20px;
+  background-color: ${COLORS.WHITE};
 
   @media(max-width: 800px){
-    padding: 10px;
     margin: 20px auto 0 auto;
   }
 
@@ -62,16 +58,29 @@ const Content = styled.div`
   }
 `
 
+const FormContent = styled.div`
+  width: 100%;
+  max-width: 480px;
+
+  @media(max-width: 800px){
+    max-width: 100%;
+  }
+`
+
 export function AuthTemplate({ children }){
   return (
-    <Main>
+    <Main white>
       <Container>
         <Effect>
           <Logo src={IMAGES.DECK_LOGO} />
         </Effect>
+
         <Content>
-          { children }
+          <FormContent>
+            { children }
+          </FormContent>
         </Content>
+
       </Container>
     </Main>
   )
