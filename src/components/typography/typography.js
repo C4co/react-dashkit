@@ -15,28 +15,28 @@ export const Title = styled.h1`
   margin-bottom: 20px;
   color: ${COLORS.TEXT_DARK};
 
-  ${props => props.h1 && css `
+  ${props => props.h1 && css`
     font-size: 2.5em;
   `}
 
-  ${props => props.h2 && css `
+  ${props => props.h2 && css`
     font-size: 2.2em;
   `}
 
 
-  ${props => props.h3 && css `
+  ${props => props.h3 && css`
     font-size: 1.9em;
   `}
 
-  ${props => props.h4 && css `
+  ${props => props.h4 && css`
     font-size: 1.6em;
   `}
 
-  ${props => props.h5 && css `
+  ${props => props.h5 && css`
     font-size: 1.3em;
   `}
 
-  ${props => props.h6 && css `
+  ${props => props.h6 && css`
     font-size: 1em;
   `}
 `

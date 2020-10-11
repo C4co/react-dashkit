@@ -16,7 +16,7 @@ import { alertProps } from "./alert-props"
 
 import { import1, example1, example2, example3, example4 } from "./alert-examples"
 
-export function DocAlert() {
+export function DocAlert () {
   return (
     <DocTemplate actived="alert" title="Alert">
       <Block bigMargin>

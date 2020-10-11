@@ -44,7 +44,7 @@ const Data = styled.textarea`
   @param {String} errorMessage - input error message
 */
 
-export function TextArea({ error, success, errorMessage, label, ...props}){
+export function TextArea ({ error, success, errorMessage, label, ...props }) {
   return (
     <Container>
       { label && <Label> {label} </Label> }

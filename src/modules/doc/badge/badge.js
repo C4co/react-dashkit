@@ -4,7 +4,7 @@ import {
   Block,
   Syntax,
   BasicTable,
-  Badge,
+  Badge
 } from "../../../components"
 
 import { DocTemplate } from "../../../templates"
@@ -25,7 +25,7 @@ import {
   example8
 } from "./badge-example"
 
-export function DocBadge() {
+export function DocBadge () {
   return (
     <DocTemplate actived="badge" title="Badge">
 

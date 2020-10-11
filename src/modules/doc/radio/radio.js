@@ -13,12 +13,12 @@ import { FaCog } from "react-icons/fa"
 
 import {
   import1,
-  example1,
+  example1
 } from "./radio-example"
 
 import { radioProps } from "./radio-props"
 
-export function DocRadio() {
+export function DocRadio () {
   const [value, setValue] = useState(null)
 
   const data = [

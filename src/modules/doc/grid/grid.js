@@ -15,7 +15,7 @@ import { FaCog } from "react-icons/fa"
 
 import { gridProps } from "./grid-props"
 
-export function DocGrid(){
+export function DocGrid () {
   return (
     <DocTemplate actived="grid" title="grid">
 

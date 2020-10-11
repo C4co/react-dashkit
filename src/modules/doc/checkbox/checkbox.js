@@ -21,7 +21,7 @@ import {
 
 import { checkboxProps } from "./checkbox-props"
 
-export function DocCheckbox() {
+export function DocCheckbox () {
   return (
     <DocTemplate actived="check" title="checkbox">
 

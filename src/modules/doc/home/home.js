@@ -15,7 +15,7 @@ const Github = styled(FaGithub)`
   margin: 0 auto;
 `
 
-export function DocHome() {
+export function DocHome () {
   return (
     <DocTemplate actived="home" title="React dashkit">
 

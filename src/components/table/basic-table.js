@@ -16,8 +16,8 @@ import {
 
 import { Alert } from "../alert/alert"
 
-export function BasicTable({ data, title, icon }){
-  if(!data){
+export function BasicTable ({ data, title, icon }) {
+  if (!data) {
     return (
       <Alert danger title="Error"> BasicTable need a valid data structure. </Alert>
     )

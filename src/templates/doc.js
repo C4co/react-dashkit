@@ -63,7 +63,7 @@ const DocTitle = styled.h1`
   color: ${COLORS.TEXT_DARK};
 `
 
-export function DocTemplate({ actived, children, title }){
+export function DocTemplate ({ actived, children, title }) {
   return (
     <Main>
       <DocContainer>

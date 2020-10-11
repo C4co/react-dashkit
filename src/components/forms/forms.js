@@ -95,7 +95,7 @@ const FormLoading = styled.div`
   align-items: center;
 `
 
-export function Form({
+export function Form ({
   children,
   title,
   error,
@@ -104,13 +104,12 @@ export function Form({
   icon,
   noShadow,
   isLoading
-}){
-
+}) {
   const Icon = icon
 
   return (
     <FormWrapper noShadow={noShadow}>
-      {  isLoading &&
+      { isLoading &&
         <FormLoading>
           <Spinner size={40} />
           <br/>

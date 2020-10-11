@@ -20,13 +20,12 @@ import {
 
 import { selectProps } from "./select-props"
 
-export function DocSelect() {
-
+export function DocSelect () {
   const data = [
-    {key: "first", value: 1},
-    {key: "second", value: 2},
-    {key: "third", value: 3},
-    {key: "fourth", value: 4}
+    { key: "first", value: 1 },
+    { key: "second", value: 2 },
+    { key: "third", value: 3 },
+    { key: "fourth", value: 4 }
   ]
 
   return (
@@ -37,7 +36,7 @@ export function DocSelect() {
       </Block>
 
       <Block>
-        <BasicTable icon={FaCog} title="<Select> - properties" data={selectProps}  />
+        <BasicTable icon={FaCog} title="<Select> - properties" data={selectProps} />
       </Block>
 
       <Block bigMargin>

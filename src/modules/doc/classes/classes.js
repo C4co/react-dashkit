@@ -16,7 +16,7 @@ import {
   textTransformProps
 } from "./classes-props"
 
-export function DocClasses() {
+export function DocClasses () {
   return (
     <DocTemplate actived="classes" title="CSS Helpers">
 

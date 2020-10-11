@@ -30,7 +30,7 @@ import {
 
 import { buttonProps } from "./button-props"
 
-export function DocButtons() {
+export function DocButtons () {
   return (
     <DocTemplate actived="buttons" title="Buttons">
 

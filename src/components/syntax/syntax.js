@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
-import { Prism } from "react-syntax-highlighter";
-import { okaidia } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { Prism } from "react-syntax-highlighter"
+import { okaidia } from "react-syntax-highlighter/dist/esm/styles/prism"
 
 const Container = styled.div`
   *{
@@ -49,7 +49,7 @@ const SyntaxCode = styled(Prism)`
   }
 `
 
-export function Syntax({ code, description, lang, arrow }){
+export function Syntax ({ code, description, lang, arrow }) {
   return (
     <Container>
       <SyntaxContainer>

@@ -18,7 +18,7 @@ const Container = styled.div`
 
 const Effect = styled.div`
   width: 100%;
-  background-color: ${ COLORS.PRIMARY };
+  background-color: ${COLORS.PRIMARY};
   background-size: cover;
   display: flex;
   align-items: center;
@@ -60,14 +60,14 @@ const Content = styled.div`
 
 const FormContent = styled.div`
   width: 100%;
-  max-width: 480px;
+  max-width: 450px;
 
   @media(max-width: 800px){
     max-width: 100%;
   }
 `
 
-export function AuthTemplate({ children }){
+export function AuthTemplate ({ children }) {
   return (
     <Main white>
       <Container>

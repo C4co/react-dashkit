@@ -38,7 +38,7 @@ const AvatarImage = styled.img`
   border-radius: 100px;
 `
 
-export function Avatar({image, size, badge, badgeColor, badgeTop, badgeBottom }){
+export function Avatar ({ image, size, badge, badgeColor, badgeTop, badgeBottom }) {
   return (
     <AvatarWrapper size={size}>
       { badge &&

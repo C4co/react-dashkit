@@ -1,6 +1,6 @@
 import "react-datepicker/dist/react-datepicker.css"
 import React from "react"
-import styled, {css} from "styled-components"
+import styled, { css } from "styled-components"
 import { COLORS } from "../../values"
 import { Label, ErrorMessage } from "../extras/extras"
 import { FaCalendarAlt } from "react-icons/fa"
@@ -132,8 +132,7 @@ const Icon = styled(FaCalendarAlt)`
  * @param {String} errorMessage - input error message
 */
 
-export function DatePicker ({label, error, errorMessage, ...props }) {
-
+export function DatePicker ({ label, error, errorMessage, ...props }) {
   return (
     <Wrapper error={error}>
       { label && <Label> {label} </Label> }
@@ -156,5 +155,5 @@ export function DatePicker ({label, error, errorMessage, ...props }) {
 
 DatePicker.defaultProps = {
   label: "",
-  icon: false,
+  icon: false
 }

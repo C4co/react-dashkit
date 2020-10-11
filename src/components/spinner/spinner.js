@@ -9,7 +9,7 @@ const SpinnerWrapper = styled.div`
     ${props => props.size && css`
       width: ${props.size}px;
       height: ${props.size}px;
-    ` }
+    `}
 
     & .path {
       stroke: hsl(210, 70, 75);

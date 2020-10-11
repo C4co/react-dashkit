@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react"
+import React, { useState, useEffect } from "react"
 
 import {
   Header,
@@ -17,24 +17,23 @@ import {
 
 import { Alert } from "../alert/alert"
 
-export function DynamicTable({data, onSelectItems, title, icon}){
+export function DynamicTable ({ data, onSelectItems, title, icon }) {
   const [selectedItems, setSelectedItems] = useState(new Set())
   const [selectedData, setSelectedData] = useState(new Set())
   const [firstTime, setFirstTime] = useState(false)
   const [allSelected, setAllSelected] = useState(false)
 
   useEffect(() => {
-    if(firstTime){
+    if (firstTime) {
       onSelectItems([...selectedData])
     }
 
-    if( data && (data.length === [...selectedData].length)){
+    if (data && (data.length === [...selectedData].length)) {
       setAllSelected(true)
     }
-
   }, [selectedItems, selectedData, onSelectItems, firstTime, data])
 
-  if(!data){
+  if (!data) {
     return (
       <Alert danger title="Error">
         DynamicTable need a valid data structure.
@@ -45,8 +44,8 @@ export function DynamicTable({data, onSelectItems, title, icon}){
   const labels = Object.keys(data[0])
   const Icon = icon
 
-  function toggleSelected(index, data){
-    if(selectedItems.has(index)){
+  function toggleSelected (index, data) {
+    if (selectedItems.has(index)) {
       const cloneItems = selectedItems
       const cloneData = selectedData
 
@@ -64,8 +63,8 @@ export function DynamicTable({data, onSelectItems, title, icon}){
     setAllSelected(false)
   }
 
-  function selectAll(){
-    if(allSelected){
+  function selectAll () {
+    if (allSelected) {
       setSelectedItems(new Set())
       setSelectedData(new Set())
       setAllSelected(false)

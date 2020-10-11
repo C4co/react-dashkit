@@ -16,7 +16,7 @@ import {
 
 import { sideMenuItemProps, sideMenuSectionProps, sideMenuProps } from "./sidemenu-props"
 
-export function DocSideMenu() {
+export function DocSideMenu () {
   return (
     <DocTemplate actived="sidemenu" title="Side menu">
       <Block bigMargin>
@@ -36,7 +36,7 @@ export function DocSideMenu() {
       </Block>
 
       <Block bigMargin>
-        <h1> {`<--- See the example there!`} </h1>
+        <h1> {"<--- See the example there!"} </h1>
         <Syntax code={example1} />
       </Block>
     </DocTemplate>

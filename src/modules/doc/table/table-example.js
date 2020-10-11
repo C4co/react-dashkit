@@ -3,9 +3,9 @@ export const import1 = `import {
   DynamicTable
 } from "../components"`
 
-export const example1 = `<BasicTable title="The title"/>`
+export const example1 = "<BasicTable title=\"The title\"/>"
 
-export const example2 = `<DynamicTable title="The title" />`
+export const example2 = "<DynamicTable title=\"The title\" />"
 
 export const example3 = `
 const data = [

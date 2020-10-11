@@ -18,16 +18,16 @@ export function AuthLogin () {
     <AuthTemplate>
       <Form noShadow>
         <Title h4 className="no-margin"> Enter </Title>
-          <div>
-            <A href="#"> Create new account </A>
-          </div>
+        <div>
+          <A href="#"> Create new account </A>
+        </div>
 
-          <Input icon={FaEnvelope} label="Email" placeholder="Ex: John" />
-          <InputPassword label="Password" placeholder="Enter your password" />
+        <Input icon={FaEnvelope} label="Email" placeholder="Ex: John" />
+        <InputPassword label="Password" placeholder="Enter your password" />
 
-          <div>
-            <A href="#"> Recover password </A>
-          </div>
+        <div>
+          <A href="#"> Recover password </A>
+        </div>
         <Button> Enter </Button>
       </Form>
     </AuthTemplate>

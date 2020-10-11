@@ -23,7 +23,7 @@ import {
 
 import { blockProps } from "./block-props"
 
-export function DocBlock() {
+export function DocBlock () {
   return (
     <DocTemplate actived="block" title="Block">
       <Block bigMargin>

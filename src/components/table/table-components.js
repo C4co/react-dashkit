@@ -1,4 +1,4 @@
-import styled, {css} from "styled-components"
+import styled, { css } from "styled-components"
 import { COLORS } from "../../values"
 
 export const Container = styled.div`
@@ -59,7 +59,7 @@ export const TableItem = styled.tr`
     border: none;
   }
 
-  ${props => props.selected && css `
+  ${props => props.selected && css`
     background: #F5F5F5;
   `}
 `

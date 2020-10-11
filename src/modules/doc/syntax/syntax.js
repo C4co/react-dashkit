@@ -17,7 +17,7 @@ import {
 
 import { syntaxProps } from "./syntax-props"
 
-export function DocSyntax() {
+export function DocSyntax () {
   return (
     <DocTemplate actived="syntax" title="Syntax">
       <Block bigMargin>

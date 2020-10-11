@@ -70,7 +70,7 @@ const Description = styled.p`
   font-style: oblique;
 `
 
-export function Radio({ options, ...props }){
+export function Radio ({ options, ...props }) {
   const name = ID()
 
   return (

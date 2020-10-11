@@ -1,4 +1,4 @@
-export const import1 = `import { Form } from "../components"`
+export const import1 = "import { Form } from \"../components\""
 
 export const example1 = `
 <Form

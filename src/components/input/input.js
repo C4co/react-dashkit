@@ -81,7 +81,6 @@ export function Input ({
   placeholder,
   ...props
 }) {
-
   const Icon = icon
   const hasIcon = icon ? "true" : ""
 

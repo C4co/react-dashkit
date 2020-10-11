@@ -17,7 +17,7 @@ import {
 
 import { datepickerProps } from "./datepcker-props"
 
-export function DocDatepicker() {
+export function DocDatepicker () {
   const [date, setDate] = useState(new Date())
 
   return (
@@ -31,12 +31,12 @@ export function DocDatepicker() {
       </Block>
 
       <Block bigMargin>
-        <DatePicker selected={date} onChange={date => {setDate(date)}} />
+        <DatePicker selected={date} onChange={date => { setDate(date) }} />
         <Syntax code={example1} />
       </Block>
 
       <Block bigMargin>
-        <DatePicker error errorMessage="Error message" selected={date} onChange={date => {setDate(date)}} />
+        <DatePicker error errorMessage="Error message" selected={date} onChange={date => { setDate(date) }} />
         <Syntax code={example2} />
       </Block>
     </DocTemplate>

@@ -1,5 +1,5 @@
 import React from "react"
-import styled, {css} from "styled-components"
+import styled, { css } from "styled-components"
 import { COLORS } from "../../values"
 
 function ID () {
@@ -64,7 +64,7 @@ const Title = styled.p`
   color: ${COLORS.TEXT_DARK};
   display: flex;
 
-  ${props => props.description && css `
+  ${props => props.description && css`
     margin-bottom: 5px;
   `}
 `

@@ -30,20 +30,19 @@ import { import1, example1, example2, example3 } from "./form-example"
 
 import { formProps, formDividerProps } from "./form-props"
 
-export function DocForm() {
-
+export function DocForm () {
   const country = [
-    {key: "United Stated", value: 1},
-    {key: "Brazil", value: 2},
-    {key: "India", value: 3},
-    {key: "China", value: 4}
+    { key: "United Stated", value: 1 },
+    { key: "Brazil", value: 2 },
+    { key: "India", value: 3 },
+    { key: "China", value: 4 }
   ]
 
   const state = [
-    {key: "California", value: 1},
-    {key: "Texas", value: 2},
-    {key: "New Jersey", value: 3},
-    {key: "Michigan", value: 4}
+    { key: "California", value: 1 },
+    { key: "Texas", value: 2 },
+    { key: "New Jersey", value: 3 },
+    { key: "Michigan", value: 4 }
   ]
 
   const roles = [

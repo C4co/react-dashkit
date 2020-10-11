@@ -21,7 +21,7 @@ import { FaCog } from "react-icons/fa"
 
 import { syntaxProps } from "./spinner-props"
 
-export function DocSpinner() {
+export function DocSpinner () {
   return (
     <DocTemplate actived="spinner" title="Spinner">
       <Block bigMargin>

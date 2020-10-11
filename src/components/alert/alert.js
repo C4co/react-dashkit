@@ -1,5 +1,5 @@
 import React from "react"
-import styled, {css} from "styled-components"
+import styled, { css } from "styled-components"
 import { COLORS } from "../../values"
 import {
   FaInfoCircle,
@@ -13,14 +13,15 @@ import { lighten, darken } from "polished"
 const AlertWrapper = styled.div`
   display: flex;
   align-items: center;
-  padding: 12px 12px;
+  padding: 10px 12px;
   color: white;
+  font-size: 0.95em;
   background-color: ${COLORS.INFO};
   color: ${darken(0.3, COLORS.INFO)};
   background-color: ${lighten(0.25, COLORS.INFO)};
   border-radius: 3px;
 
-  ${props => props.solid && css `
+  ${props => props.solid && css`
     background-color: ${COLORS.INFO};
     color: white;
   `}
@@ -74,18 +75,18 @@ const AlertTitle = styled.h1`
   }
 `
 
-export function Alert({ children, solid, danger, success, warn, title }){
+export function Alert ({children, solid, danger, success, warn, title }) {
   let Icon = FaInfoCircle
 
-  if(danger){
+  if (danger) {
     Icon = FaExclamationCircle
   }
 
-  if(warn){
+  if (warn) {
     Icon = FaExclamationTriangle
   }
 
-  if(success){
+  if (success) {
     Icon = FaCheck
   }
 

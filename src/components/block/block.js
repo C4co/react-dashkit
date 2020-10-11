@@ -73,7 +73,7 @@ const Footer = styled.div`
  * @param {boolean} noMargin - remove bottom margin
  */
 
-export function Block({
+export function Block ({
   children,
   solid,
   icon,
@@ -82,7 +82,7 @@ export function Block({
   footer,
   col2,
   noMargin
-}){
+}) {
   const Icon = icon
 
   return (

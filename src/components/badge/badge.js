@@ -1,4 +1,4 @@
-import styled, {css} from "styled-components"
+import styled, { css } from "styled-components"
 import { lighten, darken } from "polished"
 import { COLORS } from "../../values"
 
@@ -12,7 +12,7 @@ export const Badge = styled.div`
   color: ${darken(0.2, COLORS.INFO)};
   background-color: ${lighten(0.32, COLORS.INFO)};
 
-  ${props => props.solid && css `
+  ${props => props.solid && css`
     background-color: ${COLORS.INFO};
     color: white;
   `}

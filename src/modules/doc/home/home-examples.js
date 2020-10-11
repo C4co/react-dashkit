@@ -1,1 +1,1 @@
-export const install1 = ``
+export const install1 = ""

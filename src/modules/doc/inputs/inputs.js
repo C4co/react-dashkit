@@ -6,7 +6,7 @@ import {
   Input,
   InputPassword,
   TextArea,
-  BasicTable,
+  BasicTable
 } from "../../../components"
 
 import { DocTemplate } from "../../../templates"
@@ -27,7 +27,7 @@ import {
 
 import { tableProps } from "./inputs-props"
 
-export function DocInputs(){
+export function DocInputs () {
   return (
     <DocTemplate actived="inputs" title="Inputs">
 

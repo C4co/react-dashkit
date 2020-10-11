@@ -16,7 +16,7 @@ import { import1, example1, example2 } from "./avatar-examples"
 
 import { avatarProps } from "./avatar-props"
 
-export function DocAvatar() {
+export function DocAvatar () {
   const photo = "https://randomuser.me/api/portraits/women/47.jpg"
 
   return (

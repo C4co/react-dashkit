@@ -64,10 +64,10 @@ const IconHidePassword = styled(FaEyeSlash)`
   @param {String} errorMessage - input error message
 */
 
-export function InputPassword({ label, error, errorMessage, ...props }){
+export function InputPassword ({ label, error, errorMessage, ...props }) {
   const [security, setSecurity] = useState(true)
 
-  function toggleSecurity(){
+  function toggleSecurity () {
     setSecurity(!security)
   }
 
@@ -87,7 +87,7 @@ export function InputPassword({ label, error, errorMessage, ...props }){
   )
 }
 
-InputPassword.defaultProps  = {
+InputPassword.defaultProps = {
   label: "",
   error: false,
   errorMessage: ""

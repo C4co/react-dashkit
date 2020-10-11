@@ -25,8 +25,7 @@ import {
 
 import { titleProps } from "./typography-props"
 
-export function DocTypography(){
-
+export function DocTypography () {
   return (
     <DocTemplate actived="typography" title="Typography">
       <Block bigMargin>
@@ -116,5 +115,4 @@ export function DocTypography(){
 
     </DocTemplate>
   )
-
 }

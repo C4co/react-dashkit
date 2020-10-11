@@ -63,8 +63,7 @@ export function Select ({
   error,
   ...props
 }) {
-
-  if(!options.length){
+  if (!options.length) {
     return (
       <Alert danger title="Error"> Select need valid options </Alert>
     )
