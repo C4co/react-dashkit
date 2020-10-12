@@ -14,16 +14,15 @@ const AlertWrapper = styled.div`
   display: flex;
   align-items: center;
   padding: 10px 12px;
-  color: white;
+  color: ${COLORS.WHITE};
   font-size: 0.95em;
-  background-color: ${COLORS.INFO};
   color: ${darken(0.3, COLORS.INFO)};
   background-color: ${lighten(0.25, COLORS.INFO)};
   border-radius: 3px;
 
   ${props => props.solid && css`
     background-color: ${COLORS.INFO};
-    color: white;
+    color: ${COLORS.WHITE};
   `}
 
   ${props => props.danger && css`
@@ -33,7 +32,7 @@ const AlertWrapper = styled.div`
 
   ${props => props.danger && props.solid && css`
     background-color: ${COLORS.DANGER};
-    color: white;
+    color: ${COLORS.WHITE};
   `}
 
   ${props => props.success && css`
@@ -43,7 +42,7 @@ const AlertWrapper = styled.div`
 
   ${props => props.success && props.solid && css`
     background-color: ${COLORS.SUCCESS};
-    color: white;
+    color: ${COLORS.WHITE};
   `}
 
   ${props => props.warn && css`
@@ -53,7 +52,7 @@ const AlertWrapper = styled.div`
 
   ${props => props.warn && props.solid && css`
     background-color: ${COLORS.WARN};
-    color: white;
+    color: ${COLORS.WHITE};
   `}
 `
 
@@ -75,26 +74,49 @@ const AlertTitle = styled.h1`
   }
 `
 
-export function Alert ({children, solid, danger, success, warn, title }) {
+export function Alert ({
+  children,
+  solid,
+  danger,
+  success,
+  warn,
+  title
+}) {
   let Icon = FaInfoCircle
+  let iconType = "info"
 
   if (danger) {
     Icon = FaExclamationCircle
+    iconType = "danger"
   }
 
   if (warn) {
     Icon = FaExclamationTriangle
+    iconType = "warning"
   }
 
   if (success) {
     Icon = FaCheck
+    iconType = "success"
   }
 
   return (
-    <AlertWrapper success={success} danger={danger} warn={warn} solid={solid}>
-      <AlertIcon> <Icon /> </AlertIcon>
-      { title && <AlertTitle> { title } </AlertTitle> }
-      { children }
+    <AlertWrapper
+      data-testid="alert-wrapper"
+      success={success}
+      danger={danger}
+      warn={warn}
+      solid={solid}>
+
+      <AlertIcon data-icon={iconType} data-testid="alert-icon">
+        <Icon data-testid="icon" />
+      </AlertIcon>
+
+      {
+        title && <AlertTitle data-testid="alert-title"> {title} </AlertTitle>
+      }
+
+      <span data-testid="alert-text"> {children} </span>
     </AlertWrapper>
   )
 }
