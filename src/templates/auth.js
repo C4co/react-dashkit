@@ -41,7 +41,7 @@ const Logo = styled.img`
 
 const Content = styled.div`
   width: 100%;
-  max-width: 1000px;
+  max-width: 700px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -50,6 +50,7 @@ const Content = styled.div`
 
   @media(max-width: 800px){
     margin: 20px auto 0 auto;
+    max-width: 500px;
   }
 
   @media(max-width: 600px){

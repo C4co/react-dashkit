@@ -22,7 +22,7 @@ export function AuthLogin () {
           <A href="#"> Create new account </A>
         </div>
 
-        <Input icon={FaEnvelope} label="Email" placeholder="Ex: John" />
+        <Input icon={FaEnvelope} label="Email" placeholder="Ex: John@email.com" />
         <InputPassword label="Password" placeholder="Enter your password" />
 
         <div>
