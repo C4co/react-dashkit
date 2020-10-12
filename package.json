@@ -3,22 +3,23 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.11.3",
-    "@testing-library/react": "^10.4.8",
-    "@testing-library/user-event": "^12.1.1",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.0.4",
+    "@testing-library/user-event": "^12.1.7",
+    "jest-styled-components": "^7.0.3",
     "node-sass": "^4.14.1",
-    "polished": "^3.6.5",
+    "polished": "^4.0.2",
     "react": "^16.13.1",
-    "react-datepicker": "^3.1.3",
+    "react-datepicker": "^3.2.2",
     "react-dom": "^16.13.1",
-    "react-icons": "^3.10.0",
+    "react-icons": "^3.11.0",
     "react-input-mask": "^3.0.0-alpha.2",
-    "react-query": "^2.5.13",
+    "react-query": "^2.23.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
     "react-snap": "^1.23.0",
-    "react-syntax-highlighter": "^13.3.1",
-    "styled-components": "^5.1.1"
+    "react-syntax-highlighter": "^15.2.1",
+    "styled-components": "^5.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -26,7 +27,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "render": "react-snap",
-    "format": "eslint ./src"
+    "lint": "eslint ./src"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -44,13 +45,14 @@
     ]
   },
   "devDependencies": {
+    "@types/jest": "^26.0.14",
     "babel-plugin-styled-components": "^1.11.1",
     "customize-cra": "^1.0.0",
     "eslint-config-standard": "^14.1.1",
-    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-react": "^7.20.6",
+    "eslint-plugin-react": "^7.21.4",
     "eslint-plugin-standard": "^4.0.1",
     "react-app-rewired": "^2.1.6"
   }
