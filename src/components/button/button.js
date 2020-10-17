@@ -119,6 +119,7 @@ export function Button ({
   iconLeft,
   iconRight,
   loading,
+  disabled,
   ...props
 }) {
   const IconLeft = iconLeft
@@ -126,17 +127,24 @@ export function Button ({
 
   if (loading) {
     return (
-      <ButtonContainer disabled loading={loading.toString()} {...props}>
-        {children} <ButtonSpinner> <Spinner/> </ButtonSpinner>
+      <ButtonContainer
+        disabled={disabled}
+        loading={loading.toString()}
+        data-testid="button-wrapper"
+        {...props}>
+
+        {children}
+
+        <ButtonSpinner data-testid="button-spinner"> <Spinner/> </ButtonSpinner>
       </ButtonContainer>
     )
   }
 
   return (
-    <ButtonContainer {...props}>
-      { iconLeft && <ButtonIconLeft> <IconLeft/> </ButtonIconLeft> }
+    <ButtonContainer disabled={disabled} data-testid="button-wrapper" {...props}>
+      { iconLeft && <ButtonIconLeft data-testid="button-icon-left"> <IconLeft/> </ButtonIconLeft> }
       { children }
-      { iconRight && <ButtonIconRight> <IconRight/> </ButtonIconRight> }
+      { iconRight && <ButtonIconRight data-testid="button-icon-right"> <IconRight/> </ButtonIconRight> }
     </ButtonContainer>
   )
 }

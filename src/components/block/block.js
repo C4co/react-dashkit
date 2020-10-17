@@ -86,20 +86,23 @@ export function Block ({
   const Icon = icon
 
   return (
-    <Container solid={solid} bigMargin={bigMargin} noMargin={noMargin}>
+    <Container data-testid="block-wrapper" solid={solid} bigMargin={bigMargin} noMargin={noMargin}>
       {
         (solid && title) &&
-        <Header>
-          { Icon && <HeaderIcon> <Icon/> </HeaderIcon> }
-          <Title> { title } </Title>
+        <Header data-testid="block-header">
+          { Icon && <HeaderIcon data-testid="block-icon"> <Icon/> </HeaderIcon> }
+          <Title data-testid="block-title"> { title } </Title>
         </Header>
       }
 
-      <Content solid={ solid } col2={col2}>
+      <Content data-testid="block-content" solid={ solid } col2={col2}>
         { children }
       </Content>
 
-      { (solid && footer) && <Footer> { footer } </Footer> }
+      {
+        (solid && footer) &&
+        <Footer data-testid="block-footer"> { footer } </Footer>
+      }
     </Container>
   )
 }

@@ -22,8 +22,8 @@ export function AuthLogin () {
           <A href="#"> Create new account </A>
         </div>
 
-        <Input icon={FaEnvelope} label="Email" placeholder="Ex: John@email.com" />
-        <InputPassword label="Password" placeholder="Enter your password" />
+        <Input id="auth-email" icon={FaEnvelope} label="Email" placeholder="Ex: John@email.com" />
+        <InputPassword id="auth-password" label="Password" placeholder="Enter your password" />
 
         <div>
           <A href="#"> Recover password </A>

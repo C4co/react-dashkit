@@ -18,7 +18,7 @@ const AvatarWrapper = styled.div`
 const AvatarBadge = styled.div`
   width: 30%;
   height: 30%;
-  background: ${COLORS.INFO};
+  background-color: ${COLORS.INFO};
   position: absolute;
   top: -2%;
   right: -2%;
@@ -38,17 +38,21 @@ const AvatarImage = styled.img`
   border-radius: 100px;
 `
 
-export function Avatar ({ image, size, badge, badgeColor, badgeTop, badgeBottom }) {
+export function Avatar ({
+  image,
+  size,
+  badge,
+  badgeColor
+}) {
   return (
-    <AvatarWrapper size={size}>
-      { badge &&
-          <AvatarBadge
-            badgeColor={badgeColor}
-            badgeTop={badgeTop}
-            badgeBottom={badgeBottom} />
+    <AvatarWrapper data-testid="avatar-wrapper" size={size}>
+      {
+        badge && <AvatarBadge data-testid="avatar-badge" badgeColor={badgeColor} />
       }
 
-      { image && <AvatarImage src={image} />}
+      {
+        image && <AvatarImage data-testid="avatar-image" src={image} />
+      }
     </AvatarWrapper>
   )
 }

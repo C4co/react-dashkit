@@ -14,36 +14,36 @@ export const Badge = styled.div`
 
   ${props => props.solid && css`
     background-color: ${COLORS.INFO};
-    color: white;
+    color: ${COLORS.WHITE};
   `}
 
   ${props => props.danger && css`
-    color: ${darken(0.2, COLORS.DANGER)};
     background-color: ${lighten(0.32, COLORS.DANGER)};
+    color: ${darken(0.2, COLORS.DANGER)};
   `}
 
   ${props => props.danger && props.solid && css`
     background-color: ${COLORS.DANGER};
-    color: white;
+    color: ${COLORS.WHITE};
   `}
 
   ${props => props.success && css`
-    color: ${darken(0.2, COLORS.SUCCESS)};
     background-color: ${lighten(0.32, COLORS.SUCCESS)};
+    color: ${darken(0.2, COLORS.SUCCESS)};
   `}
 
   ${props => props.success && props.solid && css`
     background-color: ${COLORS.SUCCESS};
-    color: white;
+    color: ${COLORS.WHITE};
   `}
 
   ${props => props.warn && css`
-    color: ${darken(0.2, COLORS.WARN)};
     background-color: ${lighten(0.32, COLORS.WARN)};
+    color: ${darken(0.2, COLORS.WARN)};
   `}
 
   ${props => props.warn && props.solid && css`
     background-color: ${COLORS.WARN};
-    color: white;
+    color: ${COLORS.WHITE};
   `}
 `
