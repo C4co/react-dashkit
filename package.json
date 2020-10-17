@@ -1,59 +1,67 @@
 {
-  "name": "react-dashkit",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.0.4",
-    "@testing-library/user-event": "^12.1.7",
-    "jest-styled-components": "^7.0.3",
-    "node-sass": "^4.14.1",
-    "polished": "^4.0.2",
-    "react": "^16.13.1",
-    "react-datepicker": "^3.2.2",
-    "react-dom": "^16.13.1",
-    "react-icons": "^3.11.0",
-    "react-input-mask": "^3.0.0-alpha.2",
-    "react-query": "^2.23.1",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.3",
-    "react-snap": "^1.23.0",
-    "react-syntax-highlighter": "^15.2.1",
-    "styled-components": "^5.2.0"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "render": "react-snap",
-    "lint": "eslint ./src"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "@types/jest": "^26.0.14",
-    "babel-plugin-styled-components": "^1.11.1",
-    "customize-cra": "^1.0.0",
-    "eslint-config-standard": "^14.1.1",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-react": "^7.21.4",
-    "eslint-plugin-standard": "^4.0.1",
-    "react-app-rewired": "^2.1.6"
-  }
+    "name": "react-dashkit",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "@testing-library/jest-dom": "^5.11.4",
+        "@testing-library/react": "^11.0.4",
+        "@testing-library/user-event": "^12.1.7",
+        "jest-styled-components": "^7.0.3",
+        "node-sass": "^4.14.1",
+        "polished": "^4.0.2",
+        "react": "^16.13.1",
+        "react-datepicker": "^3.2.2",
+        "react-dom": "^16.13.1",
+        "react-icons": "^3.11.0",
+        "react-input-mask": "^3.0.0-alpha.2",
+        "react-query": "^2.23.1",
+        "react-router-dom": "^5.2.0",
+        "react-scripts": "3.4.3",
+        "react-snap": "^1.23.0",
+        "react-syntax-highlighter": "^15.2.1",
+        "styled-components": "^5.2.0"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject",
+        "render": "react-snap",
+        "lint": "eslint ./src",
+        "e2e": "codeceptjs run --steps",
+        "e2e:headless": "HEADLESS=true codeceptjs run --steps",
+        "e2e:ui": "codecept-ui --app"
+    },
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "devDependencies": {
+        "@codeceptjs/configure": "^0.6.0",
+        "@codeceptjs/examples": "^1.2.1",
+        "@codeceptjs/ui": "^0.4.1",
+        "@types/jest": "^26.0.14",
+        "babel-plugin-styled-components": "^1.11.1",
+        "codeceptjs": "^3.0.0",
+        "customize-cra": "^1.0.0",
+        "eslint-config-standard": "^14.1.1",
+        "eslint-plugin-import": "^2.22.1",
+        "eslint-plugin-node": "^11.1.0",
+        "eslint-plugin-promise": "^4.2.1",
+        "eslint-plugin-react": "^7.21.4",
+        "eslint-plugin-standard": "^4.0.1",
+        "playwright": "^1.4.2",
+        "react-app-rewired": "^2.1.6"
+    }
 }
