@@ -31,14 +31,13 @@ const Check = styled.input`
     content: "";
     border: solid ${COLORS.INPUT_BORDER} 3px;
     box-shadow: inset 0 0 0 3px #fff;
-    background-color: white;
+    background-color: ${COLORS.WHITE};
 
     ${props => props.disabled && css`
       background-color: ${COLORS.INPUT_BORDER};
       cursor: not-allowed;
       box-shadow: none;
     `}
-
   }
 
   &:checked + label::before {
@@ -84,11 +83,11 @@ export function Checkbox ({ label, description, ...props }) {
   const id = ID()
 
   return (
-    <Wrapper>
-      <Check type="checkbox" {...props} id={id} />
-      <Label disabled={props.disabled} htmlFor={id}>
-        <Title description={description}> {label} </Title>
-        {description && <Description> {description} </Description>}
+    <Wrapper data-testid="checkbox-wrapper">
+      <Check data-testid="checkbox-element" type="checkbox" {...props} id={id} />
+      <Label data-testid="checkbox-label" disabled={props.disabled} htmlFor={id}>
+        <Title data-testid="checkbox-title" description={description}> {label} </Title>
+        {description && <Description data-testid="checkbox-description" > {description} </Description>}
       </Label>
     </Wrapper>
   )
