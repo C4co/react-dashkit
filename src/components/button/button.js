@@ -16,7 +16,7 @@ const ButtonContainer = styled.button`
   padding: 0px 15px 0px 15px;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: ${COLORS.WHITE};
   letter-spacing: 0.07em;
   height: 40px;
   font-family: inherit;
