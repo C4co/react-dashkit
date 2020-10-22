@@ -134,10 +134,10 @@ const Icon = styled(FaCalendarAlt)`
 
 export function DatePicker ({ label, error, errorMessage, ...props }) {
   return (
-    <Wrapper error={error}>
-      { label && <Label> {label} </Label> }
+    <Wrapper data-testid="datepicker-wrapper" error={error}>
+      { label && <Label data-testid="datepicker-label"> {label} </Label> }
 
-      <Content>
+      <Content data-testid="datepicker-content">
         <ReactDatePicker
           {...props}
           // withPortal
@@ -145,10 +145,10 @@ export function DatePicker ({ label, error, errorMessage, ...props }) {
           onFocus={(e) => e.target.readOnly = true}
           autoComplete="off"
         />
-        <Icon className="dashkit__datepicker" />
+        <Icon data-testid="datepicker-icon" className="dashkit__datepicker" />
       </Content>
 
-      { errorMessage && <ErrorMessage> {errorMessage} </ErrorMessage> }
+      { errorMessage && <ErrorMessage data-testid="datepicker-error"> {errorMessage} </ErrorMessage> }
     </Wrapper>
   )
 }
