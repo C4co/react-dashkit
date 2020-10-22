@@ -1,7 +1,7 @@
 import React from "react"
 import styled, { css } from "styled-components"
 import { COLORS } from "../../values"
-import { ErrorMessage, Label } from "../extras/extras"
+import { ErrorMessage, Label } from "../form-utils/form-utils"
 import { FaAngleDown } from "react-icons/fa"
 import { Alert } from "../alert/alert"
 

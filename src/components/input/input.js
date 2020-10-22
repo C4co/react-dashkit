@@ -1,7 +1,7 @@
 import React from "react"
 import styled, { css } from "styled-components"
 import { COLORS } from "../../values"
-import { Label, ErrorMessage } from "../extras/extras"
+import { Label, ErrorMessage } from "../form-utils/form-utils"
 
 const Container = styled.label`
   display: block;

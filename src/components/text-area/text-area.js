@@ -1,6 +1,6 @@
 import React from "react"
 import styled, { css } from "styled-components"
-import { ErrorMessage, Label } from "../extras/extras"
+import { ErrorMessage, Label } from "../form-utils/form-utils"
 import { COLORS } from "../../values"
 
 const Container = styled.div``
