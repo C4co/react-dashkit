@@ -37,6 +37,10 @@ const FormWrapper = styled.section`
   ${props => props.noShadow && css`
     box-shadow: none;
   `}
+
+  ${props => props.error && css`
+    border: solid ${COLORS.DANGER} 1px;
+  `}
 `
 
 const FormContent = styled.div`
@@ -108,23 +112,25 @@ export function Form ({
   const Icon = icon
 
   return (
-    <FormWrapper noShadow={noShadow}>
-      { isLoading &&
-        <FormLoading>
-          <Spinner size={40} />
+    <FormWrapper error={error} data-testid="form-wrapper" noShadow={noShadow}>
+      {
+        isLoading &&
+        <FormLoading data-testid="form-loading">
+          <Spinner data-spinner="form-spiner" size={40} />
           <br/>
           { isLoading }
-        </FormLoading> }
+        </FormLoading>
+      }
 
       {
         (icon || title) &&
-        <FormHeader>
-          { icon && <FormIcon> <Icon/> </FormIcon> }
-          { title && <FormTitle> { title } </FormTitle> }
+        <FormHeader data-testid="form-header">
+          { icon && <FormIcon data-testid="form-icon"> <Icon/> </FormIcon> }
+          { title && <FormTitle data-testid="form-title"> { title } </FormTitle> }
         </FormHeader>
       }
 
-      <FormContent>
+      <FormContent data-testid="form-content">
         { children }
 
         {

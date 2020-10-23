@@ -8,7 +8,6 @@ import React from "react"
 import { Checkbox } from "./checkbox"
 
 describe("<Checkbox /> component", () => {
-
   test("Check initial render", () => {
     const { getByTestId } = render(<Checkbox label="checkbox component" />)
 
@@ -20,10 +19,9 @@ describe("<Checkbox /> component", () => {
   })
 
   test("Check description", () => {
-    const { getByTestId } = render(<Checkbox label="checkbox component" description="checkbox description"/> )
+    const { getByTestId } = render(<Checkbox label="checkbox component" description="checkbox description"/>)
 
     expect(getByTestId("checkbox-description")).toBeInTheDocument()
     expect(getByTestId("checkbox-description")).toHaveTextContent("checkbox description")
   })
-
 })

@@ -12,7 +12,6 @@ import { COLORS } from "../../values"
 import { FaStar } from "react-icons/fa"
 
 describe("<Block /> component", () => {
-
   test("Check initial render", () => {
     const { getByTestId } = render(<Block> <div> block component </div> </Block>)
 
@@ -73,6 +72,4 @@ describe("<Block /> component", () => {
     expect(getByTestId("block-content")).toHaveStyleRule("grid-template-columns", "1fr 1fr")
     expect(getByTestId("block-content")).toHaveStyleRule("column-gap", "20px")
   })
-
 })
-

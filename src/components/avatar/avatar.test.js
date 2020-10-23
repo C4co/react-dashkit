@@ -10,7 +10,6 @@ import { Avatar } from "./avatar"
 import { COLORS } from "../../values"
 
 describe("<Avatar/> component", () => {
-
   test("Check initial render", () => {
     const { getByTestId } = render(<Avatar image="https://randomuser.me/api/portraits/women/44.jpg" />)
 
@@ -44,5 +43,4 @@ describe("<Avatar/> component", () => {
 
     expect(getByTestId("avatar-badge")).toHaveStyleRule("background-color", "red")
   })
-
 })

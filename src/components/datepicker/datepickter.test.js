@@ -7,14 +7,14 @@ import React, { useState } from "react"
 
 import { DatePicker } from "./datepicker"
 
-function MockDatePicker(props){
+function MockDatePicker (props) {
   const [date, setDate] = useState(new Date())
 
   return (
     <DatePicker
       {...props}
       selected={date}
-      onChange={date => {setDate(date)}}
+      onChange={date => { setDate(date) }}
     />
   )
 }
@@ -23,11 +23,11 @@ describe("<Datepicker/> component", () => {
   test("Check initial render", () => {
     const { getByTestId, queryByTestId } = render(<MockDatePicker/>)
 
-    expect( getByTestId("datepicker-wrapper") ).toBeInTheDocument()
-    expect( getByTestId("datepicker-content") ).toBeInTheDocument()
-    expect( getByTestId("datepicker-icon") ).toBeInTheDocument()
-    expect( queryByTestId("datepicker-error") ).not.toBeInTheDocument()
-    expect( queryByTestId("datepicker-label") ).not.toBeInTheDocument()
+    expect(getByTestId("datepicker-wrapper")).toBeInTheDocument()
+    expect(getByTestId("datepicker-content")).toBeInTheDocument()
+    expect(getByTestId("datepicker-icon")).toBeInTheDocument()
+    expect(queryByTestId("datepicker-error")).not.toBeInTheDocument()
+    expect(queryByTestId("datepicker-label")).not.toBeInTheDocument()
   })
 
   test("Check the label", () => {
@@ -43,5 +43,4 @@ describe("<Datepicker/> component", () => {
     expect(getByTestId("datepicker-error")).toBeInTheDocument()
     expect(getByTestId("datepicker-error")).toHaveTextContent("datepicker error")
   })
-
 })

@@ -12,7 +12,6 @@ import { COLORS } from "../../values"
 import { FaStar } from "react-icons/fa"
 
 describe("<Button /> component", () => {
-
   test("Check initial render", () => {
     const { getByTestId } = render(<Button> button component </Button>)
 

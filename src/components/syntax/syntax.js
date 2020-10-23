@@ -6,6 +6,7 @@ import { okaidia } from "react-syntax-highlighter/dist/esm/styles/prism"
 const Container = styled.div`
   *{
     font-family: "Fira Code" !important;
+    font-weight: normal;
   }
 `
 

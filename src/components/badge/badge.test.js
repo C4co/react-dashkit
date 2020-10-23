@@ -12,7 +12,6 @@ import { darken, lighten } from "polished"
 import { COLORS } from "../../values"
 
 describe("<Badge/> component", () => {
-
   test("Check initial render", () => {
     const { getByText } = render(<Badge> badge </Badge>)
 
@@ -69,6 +68,4 @@ describe("<Badge/> component", () => {
     expect(getByText("badge")).toHaveStyleRule("background-color", COLORS.SUCCESS)
     expect(getByText("badge")).toHaveStyleRule("color", COLORS.WHITE)
   })
-
 })
-
