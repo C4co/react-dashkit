@@ -25,7 +25,7 @@
 
 run eslint
 
-```yarn format``` to fix issues use ```yarn format --fix```
+```yarn lint``` to fix issues use ```yarn lint --fix```
 
 ### How to test?
 
