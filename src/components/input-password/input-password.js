@@ -72,17 +72,17 @@ export function InputPassword ({ label, error, errorMessage, ...props }) {
   }
 
   return (
-    <Container>
-      {label && <Label> {label} </Label>}
+    <Container data-testid="password-container">
+      {label && <Label data-testid="password-label"> {label} </Label>}
 
-      <Content>
-        { !security && <IconShowPassword onClick={toggleSecurity} /> }
-        { security && <IconHidePassword onClick={toggleSecurity} /> }
+      <Content data-testid="password-content">
+        { !security && <IconShowPassword data-testid="password-icon-show" onClick={toggleSecurity} /> }
+        { security && <IconHidePassword data-testid="password-icon-hide" onClick={toggleSecurity} /> }
 
-        <InputData error={error} type={security ? "password" : "text"} {...props} />
+        <InputData data-testid="password-input" error={error} type={security ? "password" : "text"} {...props} />
       </Content>
 
-      { errorMessage && <ErrorMessage> {errorMessage} </ErrorMessage>}
+      { errorMessage && <ErrorMessage data-testid="password-error"> {errorMessage} </ErrorMessage>}
     </Container>
   )
 }
