@@ -13,7 +13,6 @@ const Content = styled.div`
   align-items: center;
 
   input{
-    display: flex;
     width: 100%;
     display: flex;
     padding: 13px;
@@ -54,6 +53,10 @@ const Content = styled.div`
   }
 `
 
+const CustomWrapper = styled.div`
+  width: 100%;
+`
+
 const InputIcon = styled.div`
   color: ${COLORS.INPUT_ICON};
   position: absolute;
@@ -85,20 +88,20 @@ export function Input ({
   const hasIcon = icon ? "true" : ""
 
   return (
-    <Container>
-      { label && <Label> {label} </Label> }
+    <Container data-testid="input-wrapper">
+      { label && <Label data-testid="input-label"> {label} </Label> }
 
-      <Content hasicon={hasIcon} error={error} success={success}>
+      <Content id="input-content" data-testid="input-content" hasicon={hasIcon} error={error} success={success}>
         {
           InputComponent
-            ? <InputComponent />
-            : <input type={type} placeholder={placeholder} {...props} />
+            ? <CustomWrapper data-testid="input-custom-component"> <InputComponent /> </CustomWrapper>
+            : <input data-testid="input-component" type={type} placeholder={placeholder} {...props} />
         }
 
-        { icon && <InputIcon className="dashkit__input-icon"> <Icon /> </InputIcon> }
+        { icon && <InputIcon data-testid="input-icon"> <Icon /> </InputIcon> }
       </Content>
 
-      { errorMessage && <ErrorMessage> { errorMessage } </ErrorMessage> }
+      { errorMessage && <ErrorMessage data-testid="input-error"> { errorMessage } </ErrorMessage> }
     </Container>
   )
 }
