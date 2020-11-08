@@ -22,7 +22,7 @@ const Arrow = styled.div`
   border-color: transparent transparent #262A3F transparent;
 `
 
-const SyntaxContainer = styled.div`
+const SyntaxContent = styled.div`
   position: relative;
   margin-top: 30px;
   background-color: #262A3F;
@@ -52,15 +52,15 @@ const SyntaxCode = styled(Prism)`
 
 export function Syntax ({ code, description, lang, arrow }) {
   return (
-    <Container>
-      <SyntaxContainer>
-        { arrow && <Arrow /> }
-        { description && <SyntaxDescription> {description} </SyntaxDescription> }
+    <Container data-testid="syntax-container">
+      <SyntaxContent data-testid="syntax-content">
+        { arrow && <Arrow data-testid="syntax-arrow" /> }
+        { description && <SyntaxDescription data-testid="syntax-description"> {description} </SyntaxDescription> }
 
-        <SyntaxCode showLineNumbers={true} language={lang} style={okaidia}>
+        <SyntaxCode data-testid="syntax-code" showLineNumbers={true} language={lang} style={okaidia}>
           {code.trim()}
         </SyntaxCode>
-      </SyntaxContainer>
+      </SyntaxContent>
     </Container>
   )
 }
