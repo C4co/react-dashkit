@@ -7,7 +7,7 @@ import { Link } from "react-router-dom"
 // <SideMenu />
 
 export const SideMenu = styled.section`
-  background-color: ${COLORS.SIDEMENU_BACKGROUND};
+  background-color: ${darken(0.05, COLORS.PRIMARY)};
   width: 240px;
   min-height: 100vh;
   box-shadow: 0px 2px 10px -3px ${COLORS.BLOCK_SHADOW};
@@ -27,7 +27,7 @@ export const SideMenuItemWrapper = styled(Link)`
   display: block;
   margin-bottom: 4px;
   text-decoration: none;
-  color: ${lighten(0.4, COLORS.SIDEMENU_BACKGROUND)};
+  color: ${lighten(0.4, COLORS.PRIMARY)};
   padding: 10px 15px 10px 15px;
   border-radius: 3px;
   display: flex;
@@ -37,12 +37,12 @@ export const SideMenuItemWrapper = styled(Link)`
   }
 
   &:hover{
-    background: ${darken(0.07, COLORS.SIDEMENU_BACKGROUND)};
+    background: ${darken(0.18, COLORS.PRIMARY)};
   }
 
   ${props => props.actived && css`
-    background: ${lighten(0.05, COLORS.SIDEMENU_BACKGROUND)};
-    color: white;
+    background: ${lighten(0.05, COLORS.PRIMARY)};
+    color: ${COLORS.WHITE};
   `}
 `
 
@@ -56,8 +56,16 @@ export function SideMenuItem ({ actived, to, icon, children }) {
   const Icon = icon
 
   return (
-    <SideMenuItemWrapper to={to} actived={actived}>
-      { icon && <SideMenuItemIcon> <Icon /> </SideMenuItemIcon>}
+    <SideMenuItemWrapper
+      to={to}
+      data-testid="sidemenu-item-wrapper"
+      actived={actived ? 1 : 0}>
+      {
+        icon &&
+        <SideMenuItemIcon data-testid="sidemenu-item-icon">
+          <Icon />
+        </SideMenuItemIcon>
+      }
       {children}
     </SideMenuItemWrapper>
   )
@@ -74,7 +82,7 @@ const SideMenuSectionTitle = styled.h1`
   letter-spacing: 0.1em;
   font-size: 0.8em;
   padding: 15px;
-  border-bottom: solid ${lighten(0.1, COLORS.SIDEMENU_BACKGROUND)} 1px;
+  border-bottom: solid ${lighten(0.1, COLORS.PRIMARY)} 1px;
 `
 
 const SideMenuSectionWrapper = styled.nav`
@@ -83,8 +91,13 @@ const SideMenuSectionWrapper = styled.nav`
 
 export function SideMenuSection ({ title, children }) {
   return (
-    <SideMenuSectionWrapper>
-      { title && <SideMenuSectionTitle> {title} </SideMenuSectionTitle> }
+    <SideMenuSectionWrapper data-testid="sidemenu-section-wrapper">
+      {
+        title &&
+        <SideMenuSectionTitle data-testid="sidemenu-section-title">
+          {title}
+        </SideMenuSectionTitle>
+      }
       {children}
     </SideMenuSectionWrapper>
   )
