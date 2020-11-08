@@ -27,38 +27,45 @@ export function BasicTable ({ data, title, icon }) {
   const Icon = icon
 
   return (
-    <Container>
+    <Container data-testid="basic-container">
       {
         title &&
-        <Header>
-          { icon && <HeaderIcon> <Icon/> </HeaderIcon> }
-          <HeaderTitle> { title } </HeaderTitle>
-        </Header>
+          <Header data-testid="basic-header">
+            {
+              icon &&
+              <HeaderIcon data-testid="basic-header-icon">
+                <Icon data-testid="basic-icon"/>
+              </HeaderIcon>
+            }
+            <HeaderTitle data-testid="basic-title">
+              { title }
+            </HeaderTitle>
+          </Header>
       }
 
-      <Content>
-        <TableContent>
-          <TableHead>
-            <TableLabels>
+      <Content data-testid="basic-content">
+        <TableContent data-testid="basic-table-content">
+          <TableHead data-testid="basic-table-head">
+            <TableLabels data-testid="basic-table-labels">
               {
                 labels.map(item => {
                   return (
-                    <TableTitle key={item}> {item} </TableTitle>
+                    <TableTitle data-testid="basic-table-title" key={item}> {item} </TableTitle>
                   )
                 })
               }
             </TableLabels>
           </TableHead>
 
-          <tbody>
+          <tbody data-testid="basic-table-body">
             {
               data.map((element, index) => {
                 return (
-                  <TableItem key={index}>
+                  <TableItem data-testid="basic-table-item" key={index}>
                     {
                       Object.values(element).map((item, index) => {
                         return (
-                          <TableCell key={index}> { item || "―" } </TableCell>
+                          <TableCell data-testid="basic-table-cell" key={index}> { item || "―" } </TableCell>
                         )
                       })
                     }
