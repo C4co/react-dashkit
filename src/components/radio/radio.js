@@ -74,20 +74,26 @@ export function Radio ({ options, ...props }) {
   const name = ID()
 
   return (
-    <Group>
+    <Group data-testid="radio-group">
       { options.map((item) => {
         return (
-          <Element key={item.value}>
+          <Element data-testid="radio-element" key={item.value}>
             <input
               {...props}
+              data-testid="radio-element-input"
               name={`dashkit-radio-${name}`}
               type="radio"
               id={`${item.key}-${item.value}-${name}`}
               value={item.value} />
 
-            <label htmlFor={`${item.key}-${item.value}-${name}`}>
-              <Title> {item.key} </Title>
-              { item.description && <Description> { item.description } </Description>}
+            <label data-testid="radio-element-label" htmlFor={`${item.key}-${item.value}-${name}`}>
+              <Title data-testid="radio-element-title"> {item.key} </Title>
+              {
+                item.description &&
+                <Description data-testid="radio-element-description">
+                  { item.description }
+                </Description>
+              }
             </label>
           </Element>
         )
