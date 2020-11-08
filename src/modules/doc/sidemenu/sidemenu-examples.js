@@ -26,63 +26,63 @@ import {
   <SideMenuSection title="Components">
     <SideMenuItem
       Icon={FaHome}
-      actived={actived === "home" ? 1 : 0}
+      actived={actived === "home"}
       to="/doc/home">
       Home
     </SideMenuItem>
 
     <SideMenuItem
       Icon={FaFont}
-      actived={actived === "typography" ? 1 : 0}
+      actived={actived === "typography"}
       to="/doc/typography">
       Typography
     </SideMenuItem>
 
     <SideMenuItem
       Icon={FaEdit}
-      actived={actived === "inputs" ? 1 : 0}
+      actived={actived === "inputs"}
       to="/doc/inputs">
       Inputs
     </SideMenuItem>
 
     <SideMenuItem
       Icon={FaCheckSquare}
-      actived={actived === "check" ? 1 : 0}
+      actived={actived === "check"}
       to="/doc/checkbox">
       Checkbox
     </SideMenuItem>
 
     <SideMenuItem
       Icon={FaRegDotCircle}
-      actived={actived === "radio" ? 1 : 0}
+      actived={actived === "radio"}
       to="/doc/radio">
       Radio
     </SideMenuItem>
 
     <SideMenuItem
       Icon={FaSquare}
-      actived={actived === "buttons" ? 1 : 0}
+      actived={actived === "buttons"}
       to="/doc/buttons">
       Buttons
     </SideMenuItem>
 
     <SideMenuItem
       Icon={FaChevronDown}
-      actived={actived === "select" ? 1 : 0}
+      actived={actived === "select"}
       to="/doc/select">
       Select
     </SideMenuItem>
 
     <SideMenuItem
       Icon={FaThLarge}
-      actived={actived === "block" ? 1 : 0}
+      actived={actived === "block"}
       to="/doc/block">
       Block
     </SideMenuItem>
 
     <SideMenuItem
       Icon={FaColumns}
-      actived={actived === "sidemenu" ? 1 : 0}
+      actived={actived === "sidemenu"}
       to="/doc/sidemenu">
       Sidemenu
     </SideMenuItem>
