@@ -32,6 +32,11 @@
         "e2e:headless": "HEADLESS=true codeceptjs run --steps",
         "e2e:ui": "codecept-ui --app"
     },
+    "jest": {
+        "transformIgnorePatterns": [
+            "node_modules/?!(react-syntax-highlighter/dist/esm/styles/prism)"
+        ]
+    },
     "eslintConfig": {
         "extends": "react-app"
     },
