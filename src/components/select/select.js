@@ -70,22 +70,28 @@ export function Select ({
   }
 
   return (
-    <Container>
+    <Container data-testid="select-container">
       { label && <Label> {label} </Label> }
 
-      <Content>
-        <Arrow />
+      <Content data-testid="select-content">
+        <Arrow data-testid="select-arrow" />
         <SelectWrapper
+          data-testid="select-wrapper"
           error={error}
           defaultValue={false}
           {...props}>
 
           { options &&
             <>
-              { placeholder && <option value={false} disabled> {placeholder} </option> }
+              { placeholder && <option data-testid="select-placeholder" value={false} disabled> {placeholder} </option> }
               {
                 options.map(option => (
-                  <option key={`${option.key}-${option.value}`} value={option.value}> {option.key} </option>
+                  <option
+                    data-testid="select-option"
+                    key={`${option.key}-${option.value}`}
+                    value={option.value}>
+                    {option.key}
+                  </option>
                 ))
               }
             </>
@@ -93,7 +99,7 @@ export function Select ({
         </SelectWrapper>
       </Content>
 
-      {errorMessage && <ErrorMessage> {errorMessage} </ErrorMessage>}
+      {errorMessage && <ErrorMessage data-testid="select-error" > {errorMessage} </ErrorMessage>}
     </Container>
   )
 }
