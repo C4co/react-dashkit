@@ -30,7 +30,7 @@ run eslint
 ### How to test?
 
 - [jest](https://jestjs.io/)
-- [enzyme](https://github.com/enzymejs/enzyme)
+- [testing library](https://testing-library.com/docs/react-testing-library/intro/)
 
 ```yarn test```
 
