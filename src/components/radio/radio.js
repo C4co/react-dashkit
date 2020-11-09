@@ -1,3 +1,4 @@
+import propTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
 import { COLORS } from "../../values"
@@ -100,4 +101,8 @@ export function Radio ({ options, ...props }) {
       })}
     </Group>
   )
+}
+
+Radio.propTypes = {
+  options: propTypes.array
 }

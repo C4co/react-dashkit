@@ -2,6 +2,7 @@ import React from "react"
 import styled, { css } from "styled-components"
 import { ErrorMessage, Label } from "../form-utils/form-utils"
 import { COLORS } from "../../values"
+import propTypes from "prop-types"
 
 const Container = styled.div``
 
@@ -60,5 +61,12 @@ TextArea.defaultProps = {
   label: "",
   error: false,
   success: false,
-  errorMessage: false
+  errorMessage: ""
+}
+
+TextArea.propTypes = {
+  label: propTypes.string,
+  error: propTypes.bool,
+  success: propTypes.bool,
+  errorMessage: propTypes.string
 }

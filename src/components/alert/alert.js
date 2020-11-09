@@ -9,6 +9,7 @@ import {
 } from "react-icons/fa"
 
 import { lighten, darken } from "polished"
+import propTypes from "prop-types"
 
 const AlertWrapper = styled.div`
   display: flex;
@@ -119,4 +120,13 @@ export function Alert ({
       <span data-testid="alert-text"> {children} </span>
     </AlertWrapper>
   )
+}
+
+Alert.propTypes = {
+  children: propTypes.any,
+  solid: propTypes.bool,
+  danger: propTypes.bool,
+  success: propTypes.bool,
+  warn: propTypes.bool,
+  title: propTypes.string
 }

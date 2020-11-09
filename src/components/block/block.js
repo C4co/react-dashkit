@@ -1,3 +1,4 @@
+import propTypes from "prop-types"
 import React from "react"
 import styled, { css } from "styled-components"
 import { COLORS } from "../../values"
@@ -105,4 +106,15 @@ export function Block ({
       }
     </Container>
   )
+}
+
+Block.propTypes = {
+  children: propTypes.any,
+  solid: propTypes.bool,
+  icon: propTypes.elementType,
+  bigMargin: propTypes.bool,
+  title: propTypes.string,
+  footer: propTypes.any,
+  col2: propTypes.bool,
+  noMargin: propTypes.bool
 }

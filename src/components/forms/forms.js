@@ -4,6 +4,7 @@ import { COLORS } from "../../values"
 import { lighten } from "polished"
 import { Spinner } from "../spinner/spinner"
 import { Alert } from "../alert/alert"
+import propTypes from "prop-types"
 
 /**
  * @param {String} title - form divider title
@@ -140,4 +141,15 @@ export function Form ({
       </FormContent>
     </FormWrapper>
   )
+}
+
+Form.propTypes = {
+  children: propTypes.any,
+  title: propTypes.any,
+  error: propTypes.bool,
+  errorTitle: propTypes.string,
+  errorMessage: propTypes.string,
+  icon: propTypes.elementType,
+  noShadow: propTypes.bool,
+  isLoading: propTypes.bool
 }

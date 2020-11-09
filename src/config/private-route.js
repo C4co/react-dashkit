@@ -1,3 +1,4 @@
+import propTypes from "prop-types"
 import React from "react"
 import { Redirect, Route } from "react-router-dom"
 
@@ -14,4 +15,8 @@ export function PrivateRoute ({ component: Component, ...props }) {
   return (
     <Route {...props} render={render} />
   )
+}
+
+PrivateRoute.propTypes = {
+  component: propTypes.any
 }

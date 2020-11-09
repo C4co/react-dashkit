@@ -16,6 +16,7 @@ import {
 } from "./table-components"
 
 import { Alert } from "../alert/alert"
+import propTypes from "prop-types"
 
 export function DynamicTable ({ data, onSelectItems, title, icon }) {
   const [selectedItems, setSelectedItems] = useState(new Set())
@@ -142,4 +143,11 @@ export function DynamicTable ({ data, onSelectItems, title, icon }) {
 
 DynamicTable.defaultProps = {
   onSelectItems: () => {}
+}
+
+DynamicTable.propTypes = {
+  data: propTypes.array,
+  onSelectItems: propTypes.func,
+  title: propTypes.string,
+  icon: propTypes.any
 }

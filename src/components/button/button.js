@@ -3,6 +3,7 @@ import styled, { css } from "styled-components"
 import { COLORS } from "../../values"
 import { darken } from "polished"
 import { Spinner } from "../spinner/spinner"
+import propTypes from "prop-types"
 
 const ButtonContainer = styled.button`
   border: none;
@@ -151,4 +152,12 @@ export function Button ({
 
 Button.defaultProps = {
   children: "Button"
+}
+
+Button.propTypes = {
+  children: propTypes.string,
+  iconLeft: propTypes.elementType,
+  iconRight: propTypes.elementType,
+  loading: propTypes.bool,
+  disabled: propTypes.bool
 }

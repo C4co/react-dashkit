@@ -1,7 +1,7 @@
 import "@testing-library/jest-dom/extend-expect"
 import "@testing-library/jest-dom"
 import "jest-styled-components"
-import { getByTestId, render } from "@testing-library/react"
+import { render } from "@testing-library/react"
 
 import React from "react"
 

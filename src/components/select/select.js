@@ -4,6 +4,7 @@ import { COLORS } from "../../values"
 import { ErrorMessage, Label } from "../form-utils/form-utils"
 import { FaAngleDown } from "react-icons/fa"
 import { Alert } from "../alert/alert"
+import propTypes from "prop-types"
 
 const Container = styled.div`
   position: relative;
@@ -106,8 +107,16 @@ export function Select ({
 
 Select.defaultProps = {
   options: [],
-  placeholder: false,
+  placeholder: "",
   error: false,
-  errorMessage: false,
-  label: null
+  errorMessage: "",
+  label: ""
+}
+
+Select.propTypes = {
+  options: propTypes.array,
+  placeholder: propTypes.string,
+  label: propTypes.string,
+  errorMessage: propTypes.string,
+  error: propTypes.bool
 }

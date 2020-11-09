@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { Prism } from "react-syntax-highlighter"
 import { okaidia } from "react-syntax-highlighter/dist/esm/styles/prism"
+import propTypes from "prop-types"
 
 const Container = styled.div`
   *{
@@ -50,7 +51,12 @@ const SyntaxCode = styled(Prism)`
   }
 `
 
-export function Syntax ({ code, description, lang, arrow }) {
+export function Syntax ({
+  code,
+  description,
+  lang,
+  arrow
+}) {
   return (
     <Container data-testid="syntax-container">
       <SyntaxContent data-testid="syntax-content">
@@ -68,4 +74,11 @@ export function Syntax ({ code, description, lang, arrow }) {
 Syntax.defaultProps = {
   arrow: true,
   lang: "jsx"
+}
+
+Syntax.propTypes = {
+  code: propTypes.string,
+  description: propTypes.string,
+  lang: propTypes.string,
+  arrow: propTypes.bool
 }

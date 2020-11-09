@@ -3,6 +3,7 @@ import styled, { css } from "styled-components"
 import { COLORS } from "../../values"
 import { darken, lighten } from "polished"
 import { Link } from "react-router-dom"
+import propTypes from "prop-types"
 
 // <SideMenu />
 
@@ -52,7 +53,12 @@ const SideMenuItemIcon = styled.div`
   display: flex;
 `
 
-export function SideMenuItem ({ actived, to, icon, children }) {
+export function SideMenuItem ({
+  actived,
+  to,
+  icon,
+  children
+}) {
   const Icon = icon
 
   return (
@@ -89,7 +95,10 @@ const SideMenuSectionWrapper = styled.nav`
   padding: 10px 15px 10px 15px;
 `
 
-export function SideMenuSection ({ title, children }) {
+export function SideMenuSection ({
+  title,
+  children
+}) {
   return (
     <SideMenuSectionWrapper data-testid="sidemenu-section-wrapper">
       {
@@ -101,4 +110,16 @@ export function SideMenuSection ({ title, children }) {
       {children}
     </SideMenuSectionWrapper>
   )
+}
+
+SideMenuItem.propTypes = {
+  actived: propTypes.bool,
+  to: propTypes.string,
+  icon: propTypes.any,
+  children: propTypes.any
+}
+
+SideMenuSection.propTypes = {
+  title: propTypes.string,
+  children: propTypes.any
 }

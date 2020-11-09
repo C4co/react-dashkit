@@ -3,6 +3,7 @@ import styled, { css } from "styled-components"
 import { ErrorMessage, Label } from "../form-utils/form-utils"
 import { COLORS } from "../../values"
 import { FaEye, FaEyeSlash } from "react-icons/fa"
+import propTypes from "prop-types"
 
 const Container = styled.div`
   display: block;
@@ -91,4 +92,10 @@ InputPassword.defaultProps = {
   label: "",
   error: false,
   errorMessage: ""
+}
+
+InputPassword.propTypes = {
+  label: propTypes.string,
+  error: propTypes.bool,
+  errorMessage: propTypes.string
 }

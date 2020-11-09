@@ -1,3 +1,4 @@
+import propTypes from "prop-types"
 import React from "react"
 import styled, { css } from "styled-components"
 import { COLORS } from "../../values"
@@ -95,4 +96,10 @@ export function Checkbox ({ label, description, ...props }) {
 
 Checkbox.defaultProps = {
   label: "Checkbox"
+}
+
+Checkbox.propTypes = {
+  label: propTypes.string,
+  description: propTypes.string,
+  disabled: propTypes.bool
 }

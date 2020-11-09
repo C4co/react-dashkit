@@ -1,3 +1,4 @@
+import propTypes from "prop-types"
 import React from "react"
 import styled, { css } from "styled-components"
 import { COLORS } from "../../values"
@@ -113,4 +114,15 @@ Input.defaultProps = {
   error: false,
   success: false,
   errorMessage: ""
+}
+
+Input.propTypes = {
+  label: propTypes.string,
+  InputComponent: propTypes.any,
+  icon: propTypes.any,
+  type: propTypes.string,
+  errorMessage: propTypes.string,
+  error: propTypes.bool,
+  success: propTypes.bool,
+  placeholder: propTypes.string
 }

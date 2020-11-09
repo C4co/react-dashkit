@@ -6,6 +6,7 @@ import { Label, ErrorMessage } from "../form-utils/form-utils"
 import { FaCalendarAlt } from "react-icons/fa"
 import ptBR from "date-fns/locale/pt-BR"
 import ReactDatePicker, { registerLocale, setDefaultLocale } from "react-datepicker"
+import propTypes from "prop-types"
 
 registerLocale("ptBR", ptBR)
 setDefaultLocale("ptBR")
@@ -142,7 +143,7 @@ export function DatePicker ({ label, error, errorMessage, ...props }) {
           {...props}
           // withPortal
           showPopperArrow={false}
-          onFocus={(e) => e.target.readOnly = true}
+          onFocus={(e) => { e.target.readOnly = true }}
           autoComplete="off"
         />
         <Icon data-testid="datepicker-icon" className="dashkit__datepicker" />
@@ -156,4 +157,10 @@ export function DatePicker ({ label, error, errorMessage, ...props }) {
 DatePicker.defaultProps = {
   label: "",
   icon: false
+}
+
+DatePicker.propTypes = {
+  label: propTypes.string,
+  error: propTypes.bool,
+  errorMessage: propTypes.string
 }

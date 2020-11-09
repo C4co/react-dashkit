@@ -5,6 +5,7 @@ import { Main } from "../components"
 import styled from "styled-components"
 
 import { COLORS, IMAGES } from "../values"
+import propTypes from "prop-types"
 
 const Container = styled.div`
   width: 100%;
@@ -85,4 +86,8 @@ export function AuthTemplate ({ children }) {
       </Container>
     </Main>
   )
+}
+
+AuthTemplate.propTypes = {
+  children: propTypes.any
 }

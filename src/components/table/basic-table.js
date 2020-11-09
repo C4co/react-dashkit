@@ -15,8 +15,13 @@ import {
 } from "./table-components"
 
 import { Alert } from "../alert/alert"
+import propTypes from "prop-types"
 
-export function BasicTable ({ data, title, icon }) {
+export function BasicTable ({
+  data,
+  title,
+  icon
+}) {
   if (!data) {
     return (
       <Alert danger title="Error"> BasicTable need a valid data structure. </Alert>
@@ -79,4 +84,10 @@ export function BasicTable ({ data, title, icon }) {
       </Content>
     </Container>
   )
+}
+
+BasicTable.propTypes = {
+  data: propTypes.array,
+  title: propTypes.string,
+  icon: propTypes.any
 }

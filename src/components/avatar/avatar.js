@@ -1,3 +1,4 @@
+import propTypes from "prop-types"
 import React from "react"
 import styled, { css } from "styled-components"
 import { COLORS } from "../../values"
@@ -55,4 +56,11 @@ export function Avatar ({
       }
     </AvatarWrapper>
   )
+}
+
+Avatar.propTypes = {
+  image: propTypes.string,
+  size: propTypes.string,
+  badge: propTypes.bool,
+  badgeColor: propTypes.string
 }
