@@ -4,7 +4,7 @@ import { COLORS } from "../../values"
 export const Container = styled.div`
   border-radius: 3px;
   background: white;
-  box-shadow: 0px 2px 2px 0px ${COLORS.BLOCK_SHADOW};
+  box-shadow: 0px 2px 10px -3px ${COLORS.BLOCK_SHADOW};
   border: solid ${COLORS.WHITE} 1px;
   overflow: hidden;
 `

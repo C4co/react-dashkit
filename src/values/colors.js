@@ -1,6 +1,6 @@
 
 export const COLORS = {
-  PRIMARY: "#1E68D7",
+  PRIMARY: "#3366CC",
   BACKGROUND: "#EEEEEE",
   BORDER: "#E5E5E5",
 

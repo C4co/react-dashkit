@@ -10,7 +10,7 @@ const Container = styled.div`
   ${props => props.solid && css`
     background-color: ${COLORS.BLOCK_BACKGROUND};
     border-radius: 3px;
-    box-shadow: 0px 2px 2px 0px ${COLORS.BLOCK_SHADOW};
+    box-shadow: 0px 2px 10px -3px ${COLORS.BLOCK_SHADOW};
   `}
 
   ${props => props.bigMargin && css`
