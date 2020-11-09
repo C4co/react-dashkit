@@ -8,7 +8,6 @@ import React from "react"
 import { Radio } from "./radio"
 
 describe("<Radio component/>", () => {
-
   const data = [
     { key: "First", value: 1, description: "First description" },
     { key: "Second", value: 2, description: "Second description" },
@@ -27,7 +26,7 @@ describe("<Radio component/>", () => {
   })
 
   test("Check labels, title and description", () => {
-    const { getAllByTestId } = render(<Radio options={data} /> )
+    const { getAllByTestId } = render(<Radio options={data} />)
 
     getAllByTestId("radio-element-label").forEach(element => {
       expect(element).toBeInTheDocument()
@@ -65,5 +64,4 @@ describe("<Radio component/>", () => {
       expect(flag).toBe(data[index].value.toString())
     })
   })
-
 })

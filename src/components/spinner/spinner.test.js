@@ -8,7 +8,6 @@ import React from "react"
 import { Spinner } from "./spinner"
 
 describe("<Spinner/> component", () => {
-
   test("Check initial render", () => {
     const { getByTestId } = render(<Spinner/>)
 

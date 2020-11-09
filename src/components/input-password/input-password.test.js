@@ -10,7 +10,6 @@ import { InputPassword } from "./input-password"
 import { COLORS } from "../../values"
 
 describe("<InputPassword /> component", () => {
-
   test("Check initial render", () => {
     const { getByTestId, queryByTestId } = render(<InputPassword />)
 
@@ -54,5 +53,4 @@ describe("<InputPassword /> component", () => {
     expect(getByTestId("password-icon-hide")).toBeInTheDocument()
     expect(getByTestId("password-input")).toHaveAttribute("type", "password")
   })
-
 })

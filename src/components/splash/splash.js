@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import styled, {css} from "styled-components"
+import styled, { css } from "styled-components"
 import { COLORS, IMAGES } from "../../values"
 import { Spinner } from "../../components"
 
@@ -28,10 +28,10 @@ const Logo = styled.img`
   margin-bottom: 40px;
 `
 
-export function Splash(){
+export function Splash () {
   const [hidden, setHidden] = useState(false)
 
-  window.onload = function(){
+  window.onload = function () {
     setTimeout(() => {
       setHidden(true)
     }, 600)
@@ -44,4 +44,3 @@ export function Splash(){
     </Wrapper>
   )
 }
-

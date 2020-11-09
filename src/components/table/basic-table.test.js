@@ -31,7 +31,7 @@ describe("<BasicTable/> component", () => {
     }
   ]
 
-  const dataKeys = [ "ID", "Name", "Brithday", "Address", "Phone"]
+  const dataKeys = ["ID", "Name", "Brithday", "Address", "Phone"]
 
   const values = [
     "11",
@@ -109,6 +109,4 @@ describe("<BasicTable/> component", () => {
     expect(getByTestId("alert-wrapper")).toBeInTheDocument()
     expect(getByTestId("alert-text")).toHaveTextContent("BasicTable need a valid data structure.")
   })
-
 })
-

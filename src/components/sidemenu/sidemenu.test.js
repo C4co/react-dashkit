@@ -13,7 +13,6 @@ import { lighten } from "polished"
 const history = createMemoryHistory()
 
 describe("<Sidemenu/> component", () => {
-
   test("check initial render", () => {
     const { getByTestId, queryByTestId } = render(
       <Router history={history}>
@@ -67,5 +66,4 @@ describe("<Sidemenu/> component", () => {
     expect(getByTestId("sidemenu-item-wrapper")).toHaveStyleRule("background", lighten(0.05, COLORS.PRIMARY))
     expect(getByTestId("sidemenu-item-wrapper")).toHaveStyleRule("color", COLORS.WHITE)
   })
-
 })

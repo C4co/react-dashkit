@@ -6,7 +6,6 @@ import React from "react"
 import { Syntax } from "./syntax"
 
 describe("<Syntax/> component", () => {
-
   const example = `
     function add(x, y){
       return x + y
@@ -36,5 +35,4 @@ describe("<Syntax/> component", () => {
 
     expect(getByTestId("syntax-arrow")).toBeInTheDocument()
   })
-
 })

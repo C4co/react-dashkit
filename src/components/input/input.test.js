@@ -10,7 +10,6 @@ import { Input } from "./input"
 import { FaStar } from "react-icons/fa"
 
 describe("<Input/> component", () => {
-
   test("Check initial render", () => {
     const { getByTestId } = render(<Input/>)
 
@@ -44,5 +43,4 @@ describe("<Input/> component", () => {
 
     expect(getByTestId("input-custom-component")).toBeInTheDocument()
   })
-
 })

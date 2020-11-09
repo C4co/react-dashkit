@@ -9,12 +9,11 @@ import React from "react"
 import { Select } from "./select"
 
 describe("<Select/> component", () => {
-
   const data = [
-    {key: "first", value: 1},
-    {key: "second", value: 2},
-    {key: "third", value: 3},
-    {key: "fourth", value: 4}
+    { key: "first", value: 1 },
+    { key: "second", value: 2 },
+    { key: "third", value: 3 },
+    { key: "fourth", value: 4 }
   ]
 
   test("Check initial render", () => {
@@ -25,7 +24,7 @@ describe("<Select/> component", () => {
     expect(getByTestId("select-arrow")).toBeInTheDocument()
     expect(getByTestId("select-wrapper")).toBeInTheDocument()
 
-    //options
+    // options
     getAllByTestId("select-option").forEach(element => {
       expect(element).toBeInTheDocument()
     })
@@ -49,17 +48,17 @@ describe("<Select/> component", () => {
   })
 
   test("Check changes", () => {
-    let mockValue = null;
+    let mockValue = null
 
     const { getAllByTestId, getByTestId } = render(
       <Select
         options={data}
-        placeholder="select placeholder" onChange={event => {mockValue = event.target.value}}
+        placeholder="select placeholder" onChange={event => { mockValue = event.target.value }}
       />
     )
 
     getAllByTestId("select-option").forEach((element, index) => {
-      fireEvent.change(getByTestId("select-wrapper"), {target: { value: data[index].value }})
+      fireEvent.change(getByTestId("select-wrapper"), { target: { value: data[index].value } })
       expect(mockValue).toBe(data[index].value.toString())
     })
   })
@@ -70,5 +69,4 @@ describe("<Select/> component", () => {
     expect(getByTestId("alert-wrapper")).toBeInTheDocument()
     expect(getByTestId("alert-text")).toHaveTextContent("Select need valid options")
   })
-
 })
