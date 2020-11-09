@@ -102,5 +102,13 @@ describe("<BasicTable/> component", () => {
       expect(element).toHaveTextContent(values[index])
     })
   })
+
+  test("Check table without valid data", () => {
+    const { getByTestId } = render(<BasicTable/>)
+
+    expect(getByTestId("alert-wrapper")).toBeInTheDocument()
+    expect(getByTestId("alert-text")).toHaveTextContent("BasicTable need a valid data structure.")
+  })
+
 })
 
