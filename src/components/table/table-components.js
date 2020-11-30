@@ -60,7 +60,7 @@ export const TableItem = styled.tr`
   }
 
   ${props => props.selected && css`
-    background: #F5F5F5;
+    background-color: #F5F5F5;
   `}
 `
 
@@ -76,6 +76,6 @@ export const TableCheck = styled.div`
   border-radius: 3px;
 
   ${props => props.checked && css`
-    background: ${COLORS.PRIMARY};
+    background-color: ${COLORS.PRIMARY};
   `}
 `
