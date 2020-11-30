@@ -33,6 +33,7 @@ import {
   FaCss3,
   FaLock
 } from "react-icons/fa"
+
 import propTypes from "prop-types"
 
 const DocContainer = styled.section`
@@ -231,7 +232,7 @@ export function DocTemplate ({ actived, children, title }) {
 }
 
 DocTemplate.propTypes = {
-  actived: propTypes.bool,
+  actived: propTypes.string,
   children: propTypes.any,
   title: propTypes.string
 }
