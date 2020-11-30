@@ -46,6 +46,8 @@ export function DynamicTable ({ data, onSelectItems, title, icon }) {
   const Icon = icon
 
   function toggleSelected (index, data) {
+    setFirstTime(true)
+
     if (selectedItems.has(index)) {
       const cloneItems = selectedItems
       const cloneData = selectedData
@@ -65,6 +67,8 @@ export function DynamicTable ({ data, onSelectItems, title, icon }) {
   }
 
   function selectAll () {
+    setFirstTime(true)
+
     if (allSelected) {
       setSelectedItems(new Set())
       setSelectedData(new Set())
@@ -79,53 +83,56 @@ export function DynamicTable ({ data, onSelectItems, title, icon }) {
   }
 
   return (
-    <Container>
+    <Container data-testid="dynamic-container">
       {
         title &&
-        <Header>
-          { icon && <HeaderIcon> <Icon/> </HeaderIcon> }
-          <HeaderTitle> { title } </HeaderTitle>
+        <Header data-testid="dynamic-header">
+          { icon && <HeaderIcon data-testid="dynamic-header-icon"> <Icon data-testid="dynamic-icon"/> </HeaderIcon> }
+          <HeaderTitle data-testid="dynamic-header-title"> { title } </HeaderTitle>
         </Header>
       }
 
-      <Content>
-        <TableContent>
+      <Content data-testid="dynamic-content">
+        <TableContent data-testid="dynamic-table-content">
 
-          <TableHead>
-            <TableLabels>
-              <TableTitle>
-                <TableCheck onClick={selectAll} checked={allSelected} />
+          <TableHead data-testid="dynamic-table-head">
+            <TableLabels data-testid="dynamic-table-labels">
+
+              <TableTitle data-testid="dynamic-table-title-check">
+                <TableCheck data-testid="dynamic-table-check-all" onClick={selectAll} checked={allSelected} />
               </TableTitle>
+
               {
                 labels.map(item => {
                   return (
-                    <TableTitle key={item}> { item } </TableTitle>
+                    <TableTitle data-testid="dynamic-table-title" key={item}> { item } </TableTitle>
                   )
                 })
               }
+
             </TableLabels>
           </TableHead>
 
-          <tbody>
+          <tbody data-testid="dynamic-table-body">
             {
               data.map((element, index) => {
                 return (
                   <TableItem
+                    data-testid="dynamic-table-item"
                     selected={selectedItems.has(index)}
-                    onClick={() => {
-                      toggleSelected(index, element)
-                      setFirstTime(true)
-                    }}
+                    onClick={() => {toggleSelected(index, element)}}
                     key={index}>
 
-                    <TableCell>
-                      <TableCheck checked={selectedItems.has(index)} />
+                    <TableCell data-testid="dynamic-table-cell-check">
+                      <TableCheck data-testid="dynamic-table-check" checked={selectedItems.has(index)} />
                     </TableCell>
 
                     {
                       Object.values(element).map((item, index) => {
                         return (
-                          <TableCell key={index}> { item || "―"} </TableCell>
+                          <TableCell data-testid="dynamic-table-cell" key={index}>
+                            { item || "―"}
+                          </TableCell>
                         )
                       })
                     }
@@ -136,7 +143,6 @@ export function DynamicTable ({ data, onSelectItems, title, icon }) {
           </tbody>
         </TableContent>
       </Content>
-
     </Container>
   )
 }
