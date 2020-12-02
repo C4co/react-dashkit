@@ -1,17 +1,7 @@
-jobs:
-  test:
-    steps:
-      - checkout
-      - node/install-packages:
-          pkg-manager: yarn
-      - run:
-          command: yarn run test
-          name: Run YARN tests
-orbs:
-  node: circleci/node@4.1.0
 version: 2.1
+orbs:
+  node: circleci/node@3.0.0
 workflows:
-  test_my_app:
+  node-tests:
     jobs:
-      - test
-        version: 13.11.0
+      - node/test
