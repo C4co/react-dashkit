@@ -32,9 +32,7 @@ export function Splash () {
   const [hidden, setHidden] = useState(false)
 
   window.onload = function () {
-    setTimeout(() => {
-      setHidden(true)
-    }, 600)
+    setHidden(true)
   }
 
   return (
