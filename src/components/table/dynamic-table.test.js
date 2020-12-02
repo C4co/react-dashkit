@@ -2,7 +2,7 @@ import React from "react"
 import "@testing-library/jest-dom"
 import "@testing-library/jest-dom/extend-expect"
 import "jest-styled-components"
-import { render, fireEvent, getByTestId } from "@testing-library/react"
+import { render, fireEvent } from "@testing-library/react"
 import { DynamicTable } from "./dynamic-table"
 import { FaStar } from "react-icons/fa"
 import { COLORS } from "../../values"
@@ -58,7 +58,6 @@ const values = [
 ]
 
 describe("<DynamicTable/> component", () => {
-
   test("Check initial render", () => {
     const { getByTestId, getAllByTestId } = render(<DynamicTable data={data}/>)
 
@@ -155,7 +154,7 @@ describe("<DynamicTable/> component", () => {
       expect(item).toHaveStyleRule("background-color", COLORS.PRIMARY)
     })
 
-    //unselect style
+    // unselect style
     fireEvent.click(getByTestId("dynamic-table-check-all"))
     expect(getByTestId("dynamic-table-check-all")).toHaveStyleRule("background-color", undefined)
     getAllByTestId("dynamic-table-check").forEach(item => {

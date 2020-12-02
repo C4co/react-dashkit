@@ -120,7 +120,7 @@ export function DynamicTable ({ data, onSelectItems, title, icon }) {
                   <TableItem
                     data-testid="dynamic-table-item"
                     selected={selectedItems.has(index)}
-                    onClick={() => {toggleSelected(index, element)}}
+                    onClick={() => { toggleSelected(index, element) }}
                     key={index}>
 
                     <TableCell data-testid="dynamic-table-cell-check">
