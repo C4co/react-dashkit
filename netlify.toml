@@ -1,6 +1,6 @@
 [build]
   publish = "build/"
-  command = "CI=false yarn build && yarn render"
+  command = "yarn test && yarn lint && yarn build && yarn render"
 
 [[redirects]]
   from = "/*"
