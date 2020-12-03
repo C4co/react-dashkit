@@ -1,6 +1,6 @@
 [build]
   publish = "build/"
-  command = "yarn test && yarn lint && yarn build && yarn render"
+  command = "yarn test --watchAll=false && yarn lint && yarn build && yarn render"
 
 [[redirects]]
   from = "/*"
