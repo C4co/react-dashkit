@@ -9,4 +9,7 @@ install:
 cache:
   yarn: true
 script:
+  - yarn lint
   - yarn test --watchAll=false
+  - yarn build
+  - yarn render
