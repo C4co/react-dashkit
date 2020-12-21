@@ -10,7 +10,7 @@ cache:
   yarn: true
 script:
   - yarn lint
-  - yarn test --watchAll=false
+  - yarn test --watchAll=false --coverage
   - yarn build
   - yarn render
   - cat coverage/lcov.info | node_modules/coveralls/bin/coveralls.js --verbose
