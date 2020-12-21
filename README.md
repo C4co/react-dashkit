@@ -10,6 +10,7 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/488c5c39-b4bd-4dbc-b0c2-421d562e2a85/deploy-status)](https://app.netlify.com/sites/dashkit/deploys)
 [![Maintainability](https://api.codeclimate.com/v1/badges/21585cdb9e36be2710a9/maintainability)](https://codeclimate.com/github/C4co/react-dashkit/maintainability)
+[![Build Status](https://travis-ci.com/C4co/react-dashkit.svg?branch=master)](https://travis-ci.com/C4co/react-dashkit)
 
 #### What's inside?
 
