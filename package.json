@@ -36,6 +36,14 @@
     "jest": {
         "transformIgnorePatterns": [
             "node_modules/?!(react-syntax-highlighter/dist/esm/styles/prism)"
+        ],
+        "collectCoverageFrom": [
+            "src/components/**/*.{js,jsx}",
+            "!src/components/base/base.js",
+            "!src/components/grid/grid.js",
+            "!src/components/splash/splash.js",
+            "!src/components/text-area/text-area.js",
+            "!src/components/typography/typography.js"
         ]
     },
     "eslintConfig": {
@@ -60,6 +68,7 @@
         "@types/jest": "^26.0.14",
         "babel-plugin-styled-components": "^1.11.1",
         "codeceptjs": "^3.0.0",
+        "coveralls": "^3.1.0",
         "customize-cra": "^1.0.0",
         "eslint-config-standard": "^14.1.1",
         "eslint-plugin-import": "^2.22.1",
