@@ -1,5 +1,6 @@
 import React from "react"
 import styled, { css } from "styled-components"
+import propTypes from "prop-types"
 
 const SpinnerWrapper = styled.div`
   .spinner {
@@ -41,7 +42,7 @@ const SpinnerWrapper = styled.div`
 `
 
 export function Spinner ({
-  color = "white",
+  color = "black",
   size = 18
 }) {
   return (
@@ -52,4 +53,14 @@ export function Spinner ({
       </svg>
     </SpinnerWrapper>
   )
+}
+
+Spinner.defaultProps = {
+  color: "black",
+  size: 18
+}
+
+Spinner.propTypes = {
+  color: propTypes.string,
+  size: propTypes.number
 }
