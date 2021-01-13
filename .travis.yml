@@ -1,16 +1,9 @@
 language: node_js
 node_js:
   - 14
-before_install:
-  - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.22.5
-  - export PATH="$HOME/.yarn/bin:$PATH"
-install:
-  - yarn install
-cache:
-  yarn: true
 script:
-  - yarn lint
-  - yarn test --watchAll=false --coverage
-  - yarn build
-  - yarn render
+  - npm run lint
+  - npm test --watchAll=false --coverage
+  - npm run build
+  - npm run render
   - cat coverage/lcov.info | node_modules/coveralls/bin/coveralls.js --verbose
