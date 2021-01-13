@@ -11,7 +11,6 @@ export const Text = styled.p`
 
 export const Title = styled.h1`
   font-size: 2.3em;
-  color: ${COLORS.TEXT_DARK} !important;
   margin-bottom: 20px;
   color: ${COLORS.TEXT_DARK};
 
@@ -22,7 +21,6 @@ export const Title = styled.h1`
   ${props => props.h2 && css`
     font-size: 2.2em;
   `}
-
 
   ${props => props.h3 && css`
     font-size: 1.9em;
