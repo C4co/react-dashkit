@@ -15,7 +15,7 @@ describe("<Spinner/> component", () => {
   })
 
   test("Check spinner color", () => {
-    const { getByTestId } = render(<Spinner color="red" size="100"/>)
+    const { getByTestId } = render(<Spinner color="red" size={100}/>)
 
     expect(getByTestId("spinner-circle")).toHaveAttribute("stroke", "red")
   })
