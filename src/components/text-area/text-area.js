@@ -47,10 +47,10 @@ const Data = styled.textarea`
 
 export function TextArea ({ error, success, errorMessage, label, ...props }) {
   return (
-    <Container>
-      { label && <Label> {label} </Label> }
+    <Container data-testid="textarea-container">
+      { label && <Label data-testid="textarea-label"> {label} </Label> }
 
-      <Data error={error} success={success} {...props} />
+      <Data data-testid="textarea-input" error={error} success={success} {...props} />
 
       { errorMessage && <ErrorMessage> {errorMessage} </ErrorMessage> }
     </Container>
