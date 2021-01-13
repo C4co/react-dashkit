@@ -1,6 +1,6 @@
 [build]
   publish = "build/"
-  command = "yarn test --watchAll=false && yarn lint && yarn build && yarn render"
+  command = "npm test:once && npm run lint && npm run build && npm run render"
 
 [[redirects]]
   from = "/*"
