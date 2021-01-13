@@ -27,9 +27,11 @@
         "start": "react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test",
+        "test:once": "react-scripts test --watchAll=false --coverage",
         "eject": "react-scripts eject",
         "render": "react-snap",
         "lint": "eslint ./src",
+        "lint:fix": "eslint ./src --fix",
         "e2e": "codeceptjs run --steps",
         "e2e:headless": "HEADLESS=true codeceptjs run --steps",
         "e2e:ui": "codecept-ui --app"
@@ -40,10 +42,10 @@
         ],
         "collectCoverageFrom": [
             "src/components/**/*.{js,jsx}",
+            "!src/components/index.js",
             "!src/components/base/base.js",
             "!src/components/grid/grid.js",
             "!src/components/splash/splash.js",
-            "!src/components/text-area/text-area.js",
             "!src/components/typography/typography.js"
         ]
     },
