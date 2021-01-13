@@ -22,24 +22,24 @@
 
 #### How to run?
 
-```yarn start ```
+```npm start ```
 
 #### Others commands
 
 run eslint
 
-```yarn lint``` to fix issues use ```yarn lint --fix```
+```npm run lint``` to fix issues use ```npm run lint:fix```
 
 ### How to test?
 
 - [jest](https://jestjs.io/)
 - [testing library](https://testing-library.com/docs/react-testing-library/intro/)
 
-```yarn test```
+```npm test```
 
 ### Static rendering
 
-```yarn snap```
+```npm snap```
 
 ### Structure
 
