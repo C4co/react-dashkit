@@ -27,7 +27,7 @@ describe("<Button /> component", () => {
     expect(getByTestId("button-wrapper")).toHaveStyleRule("cursor", "not-allowed")
   })
 
-  test("Check left icon", () => {
+  test("Check left and right icons", () => {
     const { getByTestId } = render(<Button iconLeft={FaStar} iconRight={FaStar} > button component </Button>)
 
     expect(getByTestId("button-icon-left")).toBeInTheDocument()
