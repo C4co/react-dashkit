@@ -1,8 +1,4 @@
-<p align="center">
-  <img alt="react" src="https://i.imgur.com/VG6A5rz.png" width="200" />
-</p>
-
-<h2 align="center">
+<h2>
   React Dashkit
 </h2>
 
